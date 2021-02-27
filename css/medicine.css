@@ -34,7 +34,7 @@
         display: inline-table;
         flex-direction: column;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-        transition: 0.3s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
     .container .card:hover{
         width: 500px;
@@ -97,5 +97,5 @@
          }
          pre {
              position: relative;
-            right: 40px;
+            right: 60px;
          }
