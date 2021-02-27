@@ -67,7 +67,7 @@
         color: #111;
         top: 5%;
         right: 20px;
-        text-align: center;
+        /* text-align: center; */
         visibility: hidden;
         opacity: 0;
         transition: 0.3s ease-in-out;
@@ -94,4 +94,8 @@
         position: relative;
         margin-top: 15px;
         left: 45px;
+         }
+         pre {
+             position: relative;
+            right: 40px;
          }
