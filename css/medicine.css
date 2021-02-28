@@ -15,7 +15,7 @@
     }
     .container ,.container2{
         position: relative;
-        width: 500px;
+        width: 350px;
         display: flex;
         justify-content: left;
         align-items: center;
