@@ -40,7 +40,7 @@ function runder(){
         buttonEl.setAttribute('id', `${i}`);
         buttonEl.textContent="donate for it ";
         buttonEl.addEventListener('click',addToDonate);
-        // buttonEl.setAttribute("onClick","addToNeed( `ID${i}`)");
+       
         //fell imgBox Div with imgEl
         divImgBox.appendChild(imgEl);
         
@@ -77,11 +77,21 @@ function getData(){
     
 }
 function addToDonate(event){
-
+let donateD = prompt("to donate by money enter 1  or 2 for medicine");
+     donateD=parseInt(donateD);
+   if (donateD ===1){
+       let aumont =prompt("enter the amount of money");
+         alert('thank you for your donate');
+   }
+   else if (donateD ===2 ) {
+    let medicineND =prompt("enter the name of medicine ");
+        alert('thank you for your donate'); 
+   }else {
+       alert('enter 1 or 2');
+   }
     console.log("donated");
 }
 
-   
 getData();
 // runder();
 
