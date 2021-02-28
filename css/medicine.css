@@ -13,9 +13,9 @@
     align-items: center;
     background: #16384c;
     }
-    .container{
+    .container ,.container2{
         position: relative;
-        width: 40%;
+        width: 500px;
         display: flex;
         justify-content: left;
         align-items: center;
@@ -23,7 +23,11 @@
         padding: 30px;
         margin-left: 2%;
     }
-    .container .card{
+    .container2{
+        position: relative;
+        top: -30vh;
+    }
+     .card{
 
         position: relative;
         max-height: 350px;
@@ -36,14 +40,14 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
         transition: 0.5s ease-in-out;
     }
-    .container .card:hover{
+     .card:hover{
         width: 500px;
         max-height: 350px;
 
     
     
     }
-    .container .card .imgBx{
+     .card .imgBx{
         position: relative;
         width: 260px;
         height: 260px;
@@ -53,12 +57,12 @@
         box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
     
     }
-    .container .card .imgBx img{
+     .card .imgBx img{
         max-width:100% ;
         border-radius:4px ;
     
     }
-    .container .card .content{
+     .card .content{
     
         position: absolute;
         /* margin-top: -140px; */
@@ -74,7 +78,7 @@
 
     }
     
-    .container .card:hover .content{
+     .card:hover .content{
     
         visibility: visible;
         opacity: 1;
