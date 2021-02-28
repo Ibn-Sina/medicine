@@ -2,7 +2,7 @@ window.onscroll = function() {myFunction()};
 function myFunction(){
 // let headEl= document.getElementById("header");
 // headEl.style.backgroundColor="#f6f5f5";
-if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+if (document.body.scrollTop > 607 || document.documentElement.scrollTop > 607) {
     // document.getElementById("header").style.fontSize = "15px";
     document.getElementById("header").style.backgroundColor = "#393e46";
     document.getElementById("header").style.transitionDuration = "300ms";

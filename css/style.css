@@ -2,19 +2,43 @@ header {
 
     
     width: 960px;
-    margin: 0 auto;
+    
     
 
 }
 
-main {
+/* main {
     width: 960px;
     margin: 0 auto;
-}
+} */
 
 footer {
+    width: 100vw;
+    height: 150px;
+    background-color: rgb(57, 62, 70);
+    
+}
+footer h4 {
+    font-size: 28px;
     width: 960px;
+    
+}
+#footer {
+    position: relative;
     margin: 0 auto;
+    left: 50%;
+    margin-left: -460px;
+    top: 42px;
+    font-family: 'Rubik';
+    color: #eeeeee;
+    width: 960px;
+}
+#last {
+    position: relative;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -180px;
+    width: 550px;
 }
 #logo {position: relative;
     width: 110px;
@@ -46,5 +70,7 @@ nav ul li {
     
     /* left: 50%;
     margin-left: -50vw; */
+
+    z-index: 10000;
 
 }
