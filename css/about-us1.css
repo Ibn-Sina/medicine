@@ -9,7 +9,7 @@
     padding :0 ;
     font-family: 'Rubik';
     
-    background-image: url("https://www.fg-a.com/wallpapers/white-ebony-wood-2018.jpg");
+    background-color: #eeeeee;
 }
 .team-section{
     overflow: hidden;
@@ -20,7 +20,7 @@
 .team-section{
     text-transform: uppercase;
     margin-bottom: 60px;
-    color: black;
+    color: #276678;
     font-size: 40px;
 }
 .border{
@@ -83,8 +83,7 @@ h4{
     color: black;
 }
 #footer{
-font-weight: bold;
-    
+   font-weight: bold;
     text-align: center;
     padding-top: 200px;
     font-size: large ;
@@ -111,4 +110,9 @@ nav ul li {
     display: inline;
     padding-right: 100px;
     margin: 0 auto;
+}
+#praghah{
+    text-transform: lowercase;
+   
+
 }
