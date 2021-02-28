@@ -7,9 +7,26 @@
 *{
     margin : 0;
     padding :0 ;
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     
     background-color: #eeeeee;
+}
+#header {
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    background-color: rgb(57, 62, 70);
+}
+header {
+    background-color: rgb(57, 62, 70);
+}
+a {
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(57, 62, 70);
+    color: white;
 }
 .team-section{
     overflow: hidden;
@@ -18,18 +35,26 @@
     padding: 60px;
 }
 .team-section{
+    position: relative;
     text-transform: uppercase;
     margin-bottom: 60px;
     color: #276678;
-    font-size: 40px;
+    font-size: 30px;
+    top: 120px;
 }
 .border{
+    position: relative;
     display: block;
     margin: auto;
     width: 160px;
     height: 3px;
-    background: #000000;
+    background: #666;
     margin-bottom: 40px;
+    top: 10px;
+}
+main {
+    position: relative;
+    top: 120px;
 }
 .picture-team{
     margin-bottom: 40px;
@@ -66,7 +91,9 @@ height: auto;
     margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-    font-size: medium;
+    font-size: 24px;
+    color: #276678;
+    font-weight: bolder;
 }
  p{
     font-size: medium;
@@ -74,7 +101,7 @@ height: auto;
     text-transform: uppercase;
     
      
-    text-align: center;
+    text-align: left;
    
     font-weight: bold;
     
@@ -84,25 +111,25 @@ h4{
 }
 #footer{
    font-weight: bold;
-    text-align: center;
-    padding-top: 200px;
+    text-align: left;
+    position: relative;
     font-size: large ;
-   
+    width: 960px;
+    margin: 0 auto;
+    background-color:  rgb(57, 62, 70);
+    color: white;
 }
 
 #logo{
     width: 100px;
     height: 100px;
 }
-nav ul a{
-    color: black;
-}
 nav ul {
     position: relative;
     bottom: 70px;
     left: 50%;
     margin-left: -240px;
-    
+    background-color: rgb(57, 62, 70);
     
 }
 
@@ -110,9 +137,42 @@ nav ul li {
     display: inline;
     padding-right: 100px;
     margin: 0 auto;
+    background-color: rgb(57, 62, 70);
+}
+p {
+    line-height: 35px;
 }
 #praghah{
+    width: 960px;
+    left: 50%;
+    margin-left: -480px;
+    position: relative;
+    text-align: justify;
+    line-height: 35px;
     text-transform: lowercase;
-   
-
+    font-size: 20px;
+}
+.team-section h1 {
+    font-weight: bolder;
+}
+#head h2 {
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    color: #276678;
+}
+#head {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    top: 120px;
+}
+#last {
+   text-align: center;
+}
+footer {
+    background-color:  rgb(57, 62, 70);
+    width: 100vw;
+    height: 300px;
 }
