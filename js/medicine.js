@@ -3,6 +3,7 @@ let medicineInNeed=[];
 let btnarr=[];
 let container = document.getElementById('container');
 let container2 = document.getElementById('container2');
+let formOne = document.getElementById('form1');
 
 
 function Medicine(name , cost  , source ,info){
@@ -46,7 +47,7 @@ function runder(){
         pContent.textContent = medicine[i].info;
 
 
-        //creat Button Element 
+        //create Button Element 
         let buttonEl=document.createElement('button');
         buttonEl.setAttribute('type','button');
 
@@ -55,7 +56,8 @@ function runder(){
         console.log(buttonEl.id);
         buttonEl.addEventListener('click',addToNeed);
        
-        btnarr.push(`ID${i}`);
+        btnarr.push(`${i}`);
+
         console.log(btnarr);
         //fell imgBox Div with imgEl
         divImgBox.appendChild(imgEl);
@@ -108,9 +110,108 @@ function savedData(){
     medicineInNeed.push(medicine[a]);
     
 
-
 savedData();
+PatientForm();
 
 }
 runder();
+
+function PatientForm(){
+let pName = document.createElement('label');
+formOne.appendChild(pName);
+pName.textContent= 'your name';
+let patientName =document.createElement ('input');
+patientName.setAttribute('type','text');
+patientName.setAttribute('id','namepatient')
+formOne.appendChild(patientName);
+let pTime =document.createElement('label');
+formOne.appendChild(pTime);
+pTime.textContent='When do you want this medication ?';
+let pTimeOne =document.createElement('input');
+formOne.appendChild(pTimeOne);
+pTimeOne.setAttribute('type','text');
+pTimeOne.setAttribute('id','timepatient');
+let pLocation = document.createElement('label')
+formOne.appendChild(pLocation);
+pLocation.textContent='Location';
+let arrayLoaction= ["Amman" , "Irbid","Karak" ,"Mafraq", "Ma'an" , "Tafilah", "Madaba", "Jerash", "Ajloun" , "Aqaba" , "Zarqa", "Balqa" ];
+let select = document.createElement("select");
+formOne.appendChild(select);
+
+for(let i=0;i<arrayLoaction.length;i++){
+    let option = document.createElement("option");
+    select.appendChild(option);
+    option.value =arrayLoaction[i];
+    option.textContent= `${arrayLoaction[i]}`;
+    option.setAttribute('id','optionOne');
+}
+
+let img= document.createElement('label');
+formOne.appendChild(img);
+img.textContent='upload your leaflet';
+let uploadImg = document.createElement('input');
+formOne.appendChild(uploadImg);
+uploadImg.setAttribute('type','file');
+uploadImg.setAttribute('id','imageleaflet');
+
+let label = document.createElement('label');
+formOne.appendChild(label);
+label.textContent='is this medicine for you?';
+let radio = document.createElement('input');
+formOne.appendChild(radio);
+
+radio.setAttribute('type','radio');
+radio.setAttribute('name','options');
+radio.setAttribute('id','radioOne');
+let yesOption =document.createElement('label');
+formOne.appendChild(yesOption);
+yesOption.textContent= 'Yes' ;
+let noOption=document.createElement('input');
+formOne.appendChild(noOption);
+noOption.setAttribute('type','radio');
+noOption.setAttribute('name','options');
+noOption.setAttribute('id','radioTwo');
+let labelTwo= document.createElement('label');
+formOne.appendChild(labelTwo);
+labelTwo.textContent='No';
+let button =document.createElement('button');
+formOne.appendChild(button);
+button.textContent='Save Information';
+button.setAttribute('id','submit')
+
+button.addEventListener(' click',addToForm);
+
+
+
+}
+
+
+let arrayForm = [];
+function Form(patientNam,time,medicineForYou ){
+  this.patientNam = patientNam;
+  this.time = time;
+  this.location = location;
+  this.medicineForYou = medicineForYou;
+  this.arrayForm.push(this);
+}
+
+function addToForm(event){
+   event.preventDefault();
+   let idName = event.target.namepatient.value;
+   let idTime = event.target.timepatient.value;
+   let idLocation = event.target.optionOne.value;
+   
+  
+   new Form (idName, idTime , idLocation  );
+   savedForm();
+}
+
+function savedForm(){
+
+    let data = JSON.stringify(arrayForm);
+    localStorage.setItem('forminformation', data);
+    
+  }
+  
+
 
