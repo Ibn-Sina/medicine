@@ -6,6 +6,8 @@ let container2 = document.getElementById('container2');
 //imgBox {img }
 //content{H2 , Button }
 function runder(){
+
+
   for(let i =0 ; i<medicineInNeed.length; i++){
 
     // create div card
@@ -67,6 +69,7 @@ function runder(){
 
     if(i%2===0){
       container.appendChild(divCard);
+
     }
     else{
       container2.appendChild(divCard);
