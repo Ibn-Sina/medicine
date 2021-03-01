@@ -6,6 +6,8 @@ if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     // document.getElementById("header").style.fontSize = "15px";
     document.getElementById("header").style.backgroundColor = "#393e46";
     document.getElementById("header").style.transitionDuration = "300ms";
+    document.getElementById("logo").style.width = "110px";
+    document.getElementById("logo").style.transitionDuration = "300ms";
     // document.getElementById("aOne").style.color = "#98ded9";
     // document.getElementById("aTwo").style.color = "#98ded9";
     // document.getElementById("aThree").style.color = "#98ded9";
@@ -15,5 +17,7 @@ if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("header").style.backgroundColor = "";
     document.getElementById("header").style.transitionDuration = "300ms";
     document.getElementById("aOne").style.color = "white";
+    document.getElementById("logo").style.width = "150px";
+    document.getElementById("logo").style.transitionDuration = "300ms";
   }
 }

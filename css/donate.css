@@ -190,7 +190,7 @@
   
   /* Set a style for the submit/login button */
   .form-container .btn {
-    background-color: #4CAF50;
+    background-color: #276678;
     color: white;
     padding-top: 13px;
     padding-bottom: 32px;
@@ -243,15 +243,10 @@
     font-family: 'Rubik', sans-serif;
     text-align: center;
 }
-#logo{
-    width: 100px;
-    height: 100px;
-}
 nav ul {
-    position: relative;
-    bottom: 70px;
-    left: 50%;
-    margin-left: -240px;
+    position: absolute;
+    right: 390px;
+    top: 40px;
     background-color: rgb(57, 62, 70);
     
 }
@@ -269,6 +264,10 @@ nav ul li {
     top: 0;
     z-index: 10000;
     background-color: rgb(57, 62, 70);
+}
+#logo{
+    width: 100px;
+    height: 100px;
 }
 header {
     background-color: rgb(57, 62, 70);
@@ -318,4 +317,61 @@ h2 {
     left: 50%;
     margin-left: -480px;
     top: 130px;
+}
+#header2 {
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(57, 62, 70);
+}
+#logo{
+    width: 100px;
+    height: 100px;
+}
+header {
+    background-color: rgb(57, 62, 70);
+    z-index: 100;
+}
+a {
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(57, 62, 70);
+    color: white;
+}
+#head {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -480px;
+    top: 130px;
+}
+h2 {
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    color: #276678;
+    text-transform: uppercase;
+}
+.border{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 3px;
+    background: #666;
+    margin-bottom: 40px;
+    top: 15px;
+}
+#para {
+    width: 960px;
+    left: 50%;
+    margin-left: -480px;
+    position: relative;
+    text-align: justify;
+    line-height: 35px;
+    font-size: 20px;
 }
