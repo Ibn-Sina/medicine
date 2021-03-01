@@ -12,6 +12,19 @@ footer {
     height: auto;
     padding: 50px 100px;
     background: #111;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+display: flex;
+justify-content: left;
+align-items: center;
+background: #16384c;
+}
+
+.container ,.container2 {
+    position: relative;
+    width: 40%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -147,26 +160,31 @@ footer p {
     color: #999;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991px){
+  
     footer {
         padding: 40px;
     }
+  
     footer .containers {
         flex-direction: column;
     }
+  
     footer .containers .sec {
         margin-right: 0;
         margin-bottom: 40px;
     }
+  
     footer .containers .sec.aboutus,
     .quicklinks,
     .contact {
         width: 100px;
     }
+}
+
     .copyright {
         padding: 8px 40px;
     }
-}
 
 * {
     margin: 0;
@@ -209,7 +227,12 @@ body {
     max-height: 350px;
 }
 
-.card .imgBx {
+.card:hover{
+    width: 500px;
+    max-height: 350px;
+}
+
+.card .imgBx{
     position: relative;
     width: 260px;
     height: 260px;
@@ -224,7 +247,12 @@ body {
     border-radius: 4px;
 }
 
-.card .content {
+.card .imgBx img{
+    max-width:100% ;
+    border-radius:4px ;
+
+}
+ .card .content{
     position: absolute;
     /* margin-top: -140px; */
     padding: 10px 15px;
@@ -238,14 +266,14 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.card:hover .content {
+.card:hover .content{
     visibility: visible;
     opacity: 1;
     /* margin-left:-40px; */
     transition-delay: 0.5s;
 }
 
-button {
+button{
     width: 181px;
     height: 25px;
     color: rgb(255, 255, 255);
@@ -262,4 +290,145 @@ button {
 pre {
     position: relative;
     right: 60px;
+}
+  
+ pre {
+     position: relative;
+    right: 60px;
+ }
+
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+  z-index: 1;
+}
+#popup1{
+  position: absolute;
+  position: absolute;
+  z-index: 3;
+}
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+ .popup .text {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.popup form .data{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;    
+
+}
+form .data input{
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 1px solid lightslategrey;
+    border-radius: 24px;
+    text-align: center;
+}
+        
+form   button{
+    height: 36px;
+    width: 411px;
+    background: -webkit-linear-gradient(right,#000000,#012cea);
+    opacity: 10px;
+    border: 3px rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    z-index: 2;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 17px;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+form button:hover {
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: hidden;
+  
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  
+  .popup{
+    width: 70%;
+  }
 }
