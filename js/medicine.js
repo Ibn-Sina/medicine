@@ -5,7 +5,7 @@ let btnarr=[];
 let container = document.getElementById('container');
 let container2 = document.getElementById('container2');
 let abc = document.getElementById('One');
-
+let formTwo =document.getElementById('form2');
 
 function Medicine(name , cost , source ,info){
   this.name = name;
@@ -238,3 +238,52 @@ function savedForm(){
 
 
 runder();
+
+formTwo.addEventListener('click',newMedicine);
+
+function newMedicine(){
+    let formT2=document.createElement('from');
+    let  mName = document.createElement('input');
+    formT2.appendChild(mName);
+     mName.setAttribute('type','text');
+     mName.setAttribute('placeholder','Medicine Name ');
+     mName.setAttribute('id','namMedicine');
+     let mCost = document.createElement('input');
+     formT2.appendChild(mCost);
+     mCost.setAttribute('type','number');
+     mCost.setAttribute('placeholder','Medicine price');
+     mCost.setAttribute('id','costMedicine');
+     //  let mImg = document.createElement('input');
+    //  formTwo.appendChild(mImg);
+    //  mImg.setAttribute('type','file');
+    //  mImg.setAttribute('id','imageM');
+    let mInfo = document.createElement('input');
+    formT2.appendChild(mInfo);
+     mInfo.setAttribute('type','text');
+     mInfo.setAttribute('placeholder','Medicine Information');
+     mInfo.setAttribute('id','infoMedicine');
+     let buttonEl3= document.createElement('input');
+     formT2.appendChild(buttonEl3);
+     buttonEl3.setAttribute('type','submit');
+     buttonEl3.setAttribute('value','submit')
+     buttonEl3.textContent=`add New Medicine`;
+     buttonEl3.addEventListener('click',addNewMedicine);
+     formTwo.appendChild(formT2);
+formTwo.removeEventListener('click',newMedicine);
+}
+
+function addNewMedicine(event){
+event.preventDefault();
+console.log(event);
+//  let mNameM =event.target.namMedicine.value;
+let mNameM="anlskndak";
+let mPriceM = 'event.target.costMedicine.value';
+ let mInfoM ='event.target.infoMedicine.value';
+//  console.log('111');
+ let msourceM = "https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg"
+ new Medicine(mNameM,mPriceM,msourceM,mInfoM);
+
+ runder();
+
+}
+
