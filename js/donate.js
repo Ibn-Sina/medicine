@@ -1,6 +1,7 @@
 let medicineInNeed=[];
 let container = document.getElementById('container');
 let container2 = document.getElementById('container2');
+
 //structure Div :-
 //card
 //imgBox {img }
