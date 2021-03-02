@@ -398,3 +398,169 @@ pre {
     position: relative;
     right: 60px;
 }    */
+
+#form2{
+    background-color: black;
+    color: blanchedalmond;
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ///////// */
+
+
+.open-button {
+    position: relative;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    right: 28px;
+    width: 280px;
+    padding-top: 10px;
+    padding-bottom: 29px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: relative;
+    /* border: 3px solid #666; */
+    z-index: 9;
+    width: 660px;
+    bottom: 42px;
+    /* border-radius: 20px; */
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+      position: relative;
+    width: 660px;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid #666;
+    border-radius: 20px;
+    height: 290px;
+    left: 50%;
+    margin-left: -531px;
+  }
+  #hideName , label[for=hideName] {
+      position: relative;
+      left: 105px;
+      bottom: 5px;
+  }
+  label {
+      font-weight: bold;
+      color: rgb(57, 62, 70);
+  }
+  input {
+      border-radius: 20px;
+  }
+  input[name=medicine] {
+      position: relative;
+      left: 325px;
+      bottom: 105px;
+  }
+  input[name=img] {
+      width: 300px;
+  }
+  label[for=medicine] {
+      position: relative;
+      left: 330px;
+      bottom: 105px;
+  }
+  label[for=img] , input[name=img] {
+      position: relative;
+      bottom: 80px;
+  }
+  label[for=num] , input[name=num] {
+    position: relative;
+    bottom: 163px;
+    left: 333px;
+}
+  .form-container h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #00adb5;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text] {
+    width: 190px;
+    padding: 15px;
+    margin:5px 1px 71px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #276678;
+    color: white;
+    padding-top: 13px;
+    padding-bottom: 32px;
+    border: none;
+    cursor: pointer;
+    width: 230px;
+    margin-bottom:10px;
+    opacity: 0.8;
+    
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+    position: relative;
+    left: 352px;
+    bottom: 141px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  .form-container .submit {
+      position: relative;
+      left: -221px;
+      bottom: 70px;
+  }
+#donarDiv {
+    width: 450px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 16px 16px 0 #111;
+    position: relative;
+    top: 50px;
+    left: -70px;
+    margin-bottom: 30px;
+}
+#donarImg {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    position: relative;
+    left: 75px;
+    top: 45px;
+}
+#donarDiv h3 {
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
