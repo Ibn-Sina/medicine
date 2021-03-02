@@ -98,7 +98,7 @@ function getData(){
 
   if(list1){
     medicineInNeed2 = list1;
-    runder();
+
   }
 
 }
@@ -125,10 +125,6 @@ for (let l=0; l<medicineInNeed2.length;l++){
   let c =medicineInNeed2[l].cost;
   let s =medicineInNeed2[l].source;
   let i =medicineInNeed2[l].info;
-
-
-
-
   MedicineInNeed(n, c, s, i);
 
 }
@@ -155,7 +151,7 @@ function openForm() {
     amount = parseInt(event.target.amount.value);
 
 
-    new MedicineInNeed ( medicineName,amount, imgSource, "00000000000000000000000000amount");
+    new MedicineInNeed ( medicineName,amount, imgSource, 'info');
     // let newData = JSON.stringify(newArr);
     // localStorage.setItem('new donation',newData);
     swal('Thank You!', 'Maybe a human will survive cause of your donation', 'success');
