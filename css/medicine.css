@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
+main {
+    position: relative;
+    padding-bottom: 250px;
+}
 #form2{
     width: 600px;
     background-color: rgb(0, 0, 0);
@@ -14,13 +18,14 @@
 footer {
     position: relative;
     width: 100%;
-    height: auto;
-    padding: 50px 100px;
+    height: 250px;
+    padding: 10px 85px;
     background: #393e46;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    top: 3750px;
+    margin-top: 200px;
+    
 }
 
 #container {
@@ -29,7 +34,9 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     width: 480px;
-    margin-right: 191px;    
+    margin: 0px;
+    position: absolute;
+    right: 0px; 
 }
 
 footer .aboutus {
@@ -50,7 +57,7 @@ footer h2:before {
     left: 0;
     width: 50px;
     height: 2px;
-    background: #f00;
+    background: #00adb5;
 }
 
 footer p {
@@ -60,7 +67,7 @@ footer p {
 }
 
 .sci {
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
 }
 
@@ -82,7 +89,7 @@ footer p {
 }
 
 .sci li a:hover {
-    background: #f00;
+    background: #00adb5;
 }
 
 .sci li a .fa {
@@ -116,7 +123,7 @@ footer p {
     width: calc(35% - -144px);
     margin-right: 0 !important;
     display: inline-block;
-    right: 0px;
+    left: 0px;
     top: 0px;
 }
 
@@ -155,9 +162,12 @@ footer p {
     text-align: center;
     color: #999;
     position: relative;
-    top: 20px;
+    top: 190px;
 }
-
+.cpayright p {
+    width: 460px;
+    margin-left: 80px;
+}
 @media (max-width: 991px) {
     footer {
         padding: 40px;
@@ -191,7 +201,7 @@ footer p {
         border-radius: 20px;
         outline: none;
         position: relative;
-        margin-top: 15px;
+        margin-top: -15px;
         left: 45px;
          }
          pre {
@@ -207,7 +217,7 @@ footer p {
             background-color: rgb(57, 62, 70);
         }
         #logo{
-            width: 100px;
+            width: 290px;
             height: 100px;
         }
         header {
@@ -230,7 +240,7 @@ footer p {
         }
         main h2 {
             margin: 0 auto;
-            font-size: large;
+            font-size: xx-large;
             text-align: center;
             color: #00adb5;
             text-transform: uppercase;
@@ -258,8 +268,8 @@ footer p {
         }
         nav ul {
             position: absolute;
-            right: 390px;
-            top: 40px;
+            right: 0px;
+            top: 42px;
             background-color: rgb(57, 62, 70);
             
         }
@@ -384,20 +394,11 @@ body {
     background-color: #eeeeee;
 }
 #bigFooter{
-    width: 960px;
+    width: 1150px;
     position: relative;
     left: 50%;
-    margin-left: -480px;
-}
-#formOne {
-    width: 400px;
-    height: 300px;
-    background-color: blue;
-    position: fixed;
-    left: 35%;
-    top: 50%;
-    z-index: 5;
-    display: none;
+    margin-left: -575px;
+    font-family: 'Rubik', sans-serif;
 }
 #namepatient {
     width: 250px;
@@ -467,6 +468,7 @@ body {
     width: 280px;
     padding-top: 10px;
     padding-bottom: 29px;
+    font-family: 'Rubik', sans-serif;
   }
   
   /* The popup form - hidden by default */
@@ -506,9 +508,10 @@ body {
       border-radius: 20px;
   }
   input[name=medicine] {
-      position: relative;
-      left: 325px;
-      bottom: 105px;
+    position: relative;
+    left: 350px;
+    bottom: 116px;
+    height: 45px;
   }
   input[name=img] {
       width: 300px;
@@ -521,10 +524,11 @@ body {
   label[for=img] , input[name=img] {
       position: relative;
       bottom: 80px;
+      left: 12px;
   }
   label[for=num] , input[name=num] {
     position: relative;
-    bottom: 163px;
+    bottom: 225px;
     left: 333px;
 }
   .form-container h1 {
@@ -566,8 +570,9 @@ body {
   .form-container .cancel {
     background-color: red;
     position: relative;
-    left: 352px;
-    bottom: 264px;  }
+    left: 361px;
+    bottom: 280px;
+ }
   
   /* Add some hover effects to buttons */
   .form-container .btn:hover, .open-button:hover {
@@ -575,8 +580,8 @@ body {
   }
   .form-container .submit {
     position: relative;
-    left: -235px;
-    bottom: 120px;
+    left: -209px;
+    bottom: 132px;
   }
 #donarDiv {
     width: 450px;
@@ -739,3 +744,7 @@ form  button{
       width: 70%;
     }
   }
+#dagara {
+    position: relative;
+    bottom: 117px;
+}
