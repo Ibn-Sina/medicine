@@ -380,22 +380,54 @@ body {
     left: 50%;
     margin-left: -480px;
 }
-/* button {
-    width: 181px;
-    height: 25px;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    background: #16384c;
-    border: 0;
-    border-radius: 20px;
-    outline: none;
-    position: relative;
-    margin-top: 15px;
-    left: 45px;
+#formOne {
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+    position: fixed;
+    left: 35%;
+    top: 50%;
+    z-index: 5;
+    display: none;
 }
-
-pre {
+#namepatient {
+    width: 250px;
     position: relative;
+    left: 50%;
+    margin-left: -125px;
+}
+#timepatient {
+    width: 250px;
+    position: relative;
+    left: 50%;
+    margin-left: -125px;
+    top: 30px;
+}
+#label1 {
+    position: relative;
+    top: 121px;
+    right: 178px;
+}
+#label2 {
+    position: relative;
+
+    top: 30px;
+}
+#label3 {
+    position: relative;
+    top: 70px;
+    right: -40px;
+}
+#label4 {
+    position: relative;
+    top: 70px;
+    left: 55px;
+}
+#optionOne {
+    position: relative;
+    top: 120px;
+    right: 170px;
+=======
     right: 60px;
 }    */
 
@@ -563,4 +595,5 @@ pre {
     font-size: 24px;
     font-family: 'Rubik', sans-serif;
     text-align: center;
+
 }
