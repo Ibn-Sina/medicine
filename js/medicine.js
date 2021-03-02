@@ -2,6 +2,7 @@
 let medicine =[];
 let medicineInNeed=[];
 let btnarr=[];
+let i = 0;
 let container = document.getElementById('container');
 let container2 = document.getElementById('container2');
 let abc = document.getElementById('One');
@@ -13,8 +14,9 @@ function Medicine(name , cost , source ,info){
   this.source = source;
   this.info=info;
   medicine.push(this);
+  runder();
   savedData();
-
+  
 }
 
 
@@ -24,64 +26,66 @@ function Medicine(name , cost , source ,info){
 //imgBox {img }
 //content{H2 , Button }
 function runder(){
-  for(let i =0 ; i<medicine.length; i++){
-    // create div card
-    let divCard=document.createElement('div');
-    divCard.setAttribute('class', 'card');
 
-    // create div ImgBox
-    let divImgBox=document.createElement('div');
-    divImgBox.setAttribute('class', 'imgBx');
+  // create div card
+  let divCard=document.createElement('div');
+  divCard.setAttribute('class', 'card');
 
-    //creat img Element  & give it src
-    let imgEl=document.createElement('img');
-    imgEl.setAttribute('src' , medicine[i].source);
+  // create div ImgBox
+  let divImgBox=document.createElement('div');
+  divImgBox.setAttribute('class', 'imgBx');
 
-    // create div Contant
-    let divContant =document.createElement('div');
-    divContant.setAttribute('class','content');
+  //creat img Element  & give it src
+  let imgEl=document.createElement('img');
+  console.log(medicine[0]);
+  imgEl.setAttribute('src' , medicine[i].source);
 
-    //create h2 Element & fell it with Name
-    let h2Content = document.createElement('h2');
-    h2Content.textContent = medicine[i].name;
+  // create div Contant
+  let divContant =document.createElement('div');
+  divContant.setAttribute('class','content');
 
-    let pContent = document.createElement('p');
-    pContent.textContent = medicine[i].info;
+  //create h2 Element & fell it with Name
+  let h2Content = document.createElement('h2');
+  h2Content.textContent = medicine[i].name;
+
+  let pContent = document.createElement('p');
+  pContent.textContent = medicine[i].info;
 
 
-    //create Button Element
-    let buttonEl=document.createElement('button');
-    buttonEl.setAttribute('type','button');
+  //create Button Element
+  let buttonEl=document.createElement('button');
+  buttonEl.setAttribute('type','button');
 
-    buttonEl.setAttribute('id', `${i}`);
-    buttonEl.textContent=`i need it ${medicine[i].cost}`;
-    // console.log(buttonEl.id);
-    buttonEl.addEventListener('click',addToNeed);
+  buttonEl.setAttribute('id', `${i}`);
+  buttonEl.textContent=`i need it ${medicine[i].cost}`;
+  // console.log(buttonEl.id);
+  buttonEl.addEventListener('click',addToNeed);
 
-    btnarr.push(`${i}`);
+  btnarr.push(`${i}`);
 
-    // console.log(btnarr);
-    //fell imgBox Div with imgEl
-    divImgBox.appendChild(imgEl);
+  // console.log(btnarr);
+  //fell imgBox Div with imgEl
+  divImgBox.appendChild(imgEl);
 
-    //fell content
-    divContant.appendChild(h2Content);
-    divContant.appendChild(pContent);
+  //fell content
+  divContant.appendChild(h2Content);
+  divContant.appendChild(pContent);
 
-    //push div ImgBox & div Contant inside divCard
-    divCard.appendChild(divImgBox);
-    divCard.appendChild(divContant);
-    divCard.appendChild(buttonEl);
-    if(i%2===0){
-      container.appendChild(divCard);
-    }
-    else{
-      container2.appendChild(divCard);
-
-    }
+  //push div ImgBox & div Contant inside divCard
+  divCard.appendChild(divImgBox);
+  divCard.appendChild(divContant);
+  divCard.appendChild(buttonEl);
+  if(i%2===0){
+    container.appendChild(divCard);
+  }
+  else{
+    container2.appendChild(divCard);
 
   }
+
+  i++;
 }
+
 function savedData(){
 
   let data = JSON.stringify(medicineInNeed);
@@ -238,10 +242,6 @@ function savedForm(){
 
 
 
-runder();
-
-
-
 
 
 
@@ -363,60 +363,12 @@ function openForm() {
 
 }
 
+
+
+
 function newRunder(medicineName , price , imgSource , info){
-
-  // create div card
-  let divCard=document.createElement('div');
-  divCard.setAttribute('class', 'card');
-
-  // create div ImgBox
-  let divImgBox=document.createElement('div');
-  divImgBox.setAttribute('class', 'imgBx');
-
-  //creat img Element  & give it src
-  let imgEl=document.createElement('img');
-  imgEl.setAttribute('src' , imgSource);
-
-  // create div Contant
-  let divContant =document.createElement('div');
-  divContant.setAttribute('class','content');
-
-  //create h2 Element & fell it with Name
-  let h2Content = document.createElement('h2');
-  h2Content.textContent =medicineName;
-
-  let pContent = document.createElement('p');
-  pContent.textContent =info;
-
-
-  //create Button Element
-  let buttonEl=document.createElement('button');
-  buttonEl.setAttribute('type','button');
-
-  buttonEl.setAttribute('id', 'new');
-  buttonEl.textContent=`i need it ${price}`;
-  // console.log(buttonEl.id);
-  buttonEl.addEventListener('click',addToNeed);
-
-  // btnarr.push(`${i}`);
-
-  // console.log(btnarr);
-  //fell imgBox Div with imgEl
-  divImgBox.appendChild(imgEl);
-
-  //fell content
-  divContant.appendChild(h2Content);
-  divContant.appendChild(pContent);
-
-  //push div ImgBox & div Contant inside divCard
-  divCard.appendChild(divImgBox);
-  divCard.appendChild(divContant);
-  divCard.appendChild(buttonEl);
-
-  container2.appendChild(divCard);
+  new Medicine(medicineName , price , imgSource , info);
 
 }
-
-
 
 
