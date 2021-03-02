@@ -5,17 +5,21 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
-
+main {
+    position: relative;
+    padding-bottom: 250px;
+}
 footer {
     position: relative;
     width: 100%;
-    height: auto;
-    padding: 50px 100px;
+    height: 250px;
+    padding: 10px 85px;
     background: #393e46;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    top: 3750px;
+    margin-top: 200px;
+    top: 3600px;
 }
 
 #container {
@@ -25,6 +29,8 @@ footer {
     flex-direction: row;
     width: 480px;
     margin: 0px;
+    position: absolute;
+    right: 0px;
     
 }
 
@@ -46,7 +52,7 @@ footer h2:before {
     left: 0;
     width: 50px;
     height: 2px;
-    background: #f00;
+    background: #00adb5;
 }
 
 footer p {
@@ -56,7 +62,7 @@ footer p {
 }
 
 .sci {
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
 }
 
@@ -78,7 +84,7 @@ footer p {
 }
 
 .sci li a:hover {
-    background: #f00;
+    background: #00adb5;
 }
 
 .sci li a .fa {
@@ -112,7 +118,7 @@ footer p {
     width: calc(35% - -144px);
     margin-right: 0 !important;
     display: inline-block;
-    right: 0px;
+    left: 0px;
     top: 0px;
 }
 
@@ -151,9 +157,12 @@ footer p {
     text-align: center;
     color: #999;
     position: relative;
-    top: 20px;
+    top: 190px;
 }
-
+.cpayright p {
+    width: 460px;
+    margin-left: 80px;
+}
 @media (max-width: 991px) {
     footer {
         padding: 40px;
@@ -254,8 +263,8 @@ footer p {
         }
         nav ul {
             position: absolute;
-            right: 390px;
-            top: 40px;
+            right: 0px;
+            top: 42px;
             background-color: rgb(57, 62, 70);
             
         }
@@ -376,10 +385,11 @@ body {
     background-color: #eeeeee;
 }
 #bigFooter{
-    width: 960px;
+    width: 1150px;
     position: relative;
     left: 50%;
-    margin-left: -480px;
+    margin-left: -575px;
+    font-family: 'Rubik', sans-serif;
 }
 #formOne {
     width: 400px;
