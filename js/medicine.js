@@ -5,9 +5,14 @@ let btnarr=[];
 let i = 0;
 let container = document.getElementById('container');
 let container2 = document.getElementById('container2');
-let abc = document.getElementById('One');
 let btn2=document.getElementById('mainBtn');
 btn2.addEventListener('click',openForm);
+const needform=document.getElementById('neededform');
+
+needform.addEventListener('submit',addToForm);
+
+
+
 function Medicine(name , cost , source ,info){
   this.name = name;
   this.cost = cost;
@@ -53,6 +58,7 @@ function runder(){
 
 
   //create Button Element
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
   let buttonEl=document.createElement('button');
   buttonEl.setAttribute('type','button');
 
@@ -60,6 +66,7 @@ function runder(){
   buttonEl.textContent=`i need it ${medicine[i].cost}`;
   // console.log(buttonEl.id);
   buttonEl.addEventListener('click',addToNeed);
+  //////////////////////////////////////////////////////////////////////////////////////////////////////
 
   btnarr.push(`${i}`);
 
@@ -110,123 +117,135 @@ new Medicine('sandimmun neoral 100mg','166 Jd','images/download (1).jpg','The sc
 new Medicine('Forxiga 10mg','34.48 Jd','images/155189718_272896877555583_204947457729308298_n.jpg','The scientific name : Dapagliflozin It is used to  -control blood sugar levels in patients with type 2 diabetes.-Pharmacological forms of Forsega . -Coated tablets 10 mg, 5 mg .');
 new Medicine('Intense chronic obstructive pulmonary oxygen','900 Jd','images/154362219_845885482626166_7675673876928082082_n.jpg','-A 5-liter household oxygen generating device . -Italian origin .');
 new Medicine('Medical chair for special needs','2000 Jd','images/154328692_791594548121080_2161618573554802077_n.jpg','Medical chair for special needs  Helping patients with disabilities or those with special needs (mobility impairment) to move and move easily and easily.');
-function addToNeed(event){
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+function addToNeed(event){
+  document.location.href='#popup1';
   event.preventDefault();
   let a = event.target.id;
   medicineInNeed.push(medicine[a]);
   savedData();
-  document.getElementById('formOne').style.display = 'block';
-}
-PatientForm();
-
-function PatientForm(){
-
-  let formOne = document.createElement('form');
-  formOne.id = 'formOne';
-  let patientName =document.createElement ('input');
-  patientName.setAttribute('placeholder','your name');
-  patientName.setAttribute('type','text');
-  patientName.setAttribute('id','namepatient');
-  let pTimeOne =document.createElement('input');
-  pTimeOne.setAttribute('placeholder','When do you want this medication ?');
-  pTimeOne.setAttribute('type','text');
-  pTimeOne.setAttribute('id','timepatient');
-  let pLocation = document.createElement('label');
-  pLocation.textContent='Location';
-  pLocation.id = 'label1';
-  let arrayLoaction= ['Amman' , 'Irbid','Karak' ,'Mafraq', 'Ma\'an' , 'Tafilah', 'Madaba', 'Jerash', 'Ajloun' , 'Aqaba' , 'Zarqa', 'Balqa' ];
-  let select = document.createElement('select');
-  select.id = 'optionOne';
-
-
-  for(let i=0;i<arrayLoaction.length;i++){
-    let option = document.createElement('option');
-    select.appendChild(option);
-    option.value =arrayLoaction[i];
-    option.textContent= `${arrayLoaction[i]}`;
-    // option.setAttribute('id','optionOne');
-  }
-
-  // let img= document.createElement('label');
-  // img.textContent='upload your leaflet';
-  // let uploadImg = document.createElement('input');
-  // formOne.appendChild(uploadImg);
-  // uploadImg.setAttribute('type','file');
-  // uploadImg.setAttribute('id','imageleaflet');
-
-  let label = document.createElement('label');
-  label.textContent='is this medicine for you?';
-  label.id = 'label2';
-  let radio = document.createElement('input');
-
-  radio.setAttribute('type','radio');
-  radio.setAttribute('name','options');
-  radio.setAttribute('id','radioOne');
-  let yesOption =document.createElement('label');
-  yesOption.textContent= 'Yes' ;
-  yesOption.id = 'label3';
-  let noOption=document.createElement('input');
-  noOption.setAttribute('type','radio');
-  noOption.setAttribute('name','options');
-  noOption.setAttribute('id','radioTwo');
-  let labelTwo= document.createElement('label');
-  labelTwo.textContent='No';
-  labelTwo.id = 'label4';
-
-
-
-  let buttonEL2 =document.createElement('input');
-  formOne.appendChild(buttonEL2);
-  buttonEL2.textContent='Save Information';
-  buttonEL2.setAttribute('type','submit');
-  buttonEL2.setAttribute('value','submit');
-  buttonEL2.setAttribute('id','id2');
-  buttonEL2.setAttribute('onclick', 'sweetAl()');
-  let closeBtn = document.createElement('input');
-  closeBtn.setAttribute ('onclick','closeFun()');
-  closeBtn.textContent = 'close';
-  formOne.appendChild(closeBtn);
-  closeBtn.type = 'button';
-  closeBtn.value = 'close';
-  closeBtn.id = 'closeBtn';
-  formOne.appendChild(patientName);
-  formOne.appendChild(pTimeOne);
-  formOne.appendChild(pLocation);
-  formOne.appendChild(select);
-  formOne.appendChild(label);
-  formOne.appendChild(radio);
-  formOne.appendChild(yesOption);
-  formOne.appendChild(noOption);
-  formOne.appendChild(labelTwo);
-  formOne.appendChild(buttonEL2);
-
-
-
-  formOne.addEventListener('submit',addToForm);
-
-  abc.appendChild(formOne);
-
-
 }
 
-function closeFun() {
-  document.getElementById('formOne').style.display = 'none';
 
-  console.log('ishaq');
-}
-function sweetAl() {
-  swal('Thank You' , 'Relax your medicine in the way', 'success');
-  document.getElementById('formOne').style.display = 'none';
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// PatientForm();
+
+// function PatientForm(){
+
+//   let formOne = document.createElement('form');
+//   formOne.id = 'formOne';
+//   let patientName =document.createElement ('input');
+//   patientName.setAttribute('placeholder','your name');
+//   patientName.setAttribute('type','text');
+//   patientName.setAttribute('id','namepatient');
+//   let pTimeOne =document.createElement('input');
+//   pTimeOne.setAttribute('placeholder','When do you want this medication ?');
+//   pTimeOne.setAttribute('type','text');
+//   pTimeOne.setAttribute('id','timepatient');
+//   let pLocation = document.createElement('label');
+//   pLocation.textContent='Location';
+//   pLocation.id = 'label1';
+//   let arrayLoaction= ['Amman' , 'Irbid','Karak' ,'Mafraq', 'Ma\'an' , 'Tafilah', 'Madaba', 'Jerash', 'Ajloun' , 'Aqaba' , 'Zarqa', 'Balqa' ];
+//   let select = document.createElement('select');
+//   select.id = 'optionOne';
+
+
+//   for(let i=0;i<arrayLoaction.length;i++){
+//     let option = document.createElement('option');
+//     select.appendChild(option);
+//     option.value =arrayLoaction[i];
+//     option.textContent= `${arrayLoaction[i]}`;
+//     // option.setAttribute('id','optionOne');
+//   }
+
+//   // let img= document.createElement('label');
+//   // img.textContent='upload your leaflet';
+//   // let uploadImg = document.createElement('input');
+//   // formOne.appendChild(uploadImg);
+//   // uploadImg.setAttribute('type','file');
+//   // uploadImg.setAttribute('id','imageleaflet');
+
+//   let label = document.createElement('label');
+//   label.textContent='is this medicine for you?';
+//   label.id = 'label2';
+//   let radio = document.createElement('input');
+
+//   radio.setAttribute('type','radio');
+//   radio.setAttribute('name','options');
+//   radio.setAttribute('id','radioOne');
+//   let yesOption =document.createElement('label');
+//   yesOption.textContent= 'Yes' ;
+//   yesOption.id = 'label3';
+//   let noOption=document.createElement('input');
+//   noOption.setAttribute('type','radio');
+//   noOption.setAttribute('name','options');
+//   noOption.setAttribute('id','radioTwo');
+//   let labelTwo= document.createElement('label');
+//   labelTwo.textContent='No';
+//   labelTwo.id = 'label4';
+
+
+
+//   let buttonEL2 =document.createElement('input');
+//   formOne.appendChild(buttonEL2);
+//   buttonEL2.textContent='Save Information';
+//   buttonEL2.setAttribute('type','submit');
+//   buttonEL2.setAttribute('value','submit');
+//   buttonEL2.setAttribute('id','id2');
+//   buttonEL2.setAttribute('onclick', 'sweetAl()');
+//   let closeBtn = document.createElement('input');
+//   closeBtn.setAttribute ('onclick','closeFun()');
+//   closeBtn.textContent = 'close';
+//   formOne.appendChild(closeBtn);
+//   closeBtn.type = 'button';
+//   closeBtn.value = 'close';
+//   closeBtn.id = 'closeBtn';
+//   formOne.appendChild(patientName);
+//   formOne.appendChild(pTimeOne);
+//   formOne.appendChild(pLocation);
+//   formOne.appendChild(select);
+//   formOne.appendChild(label);
+//   formOne.appendChild(radio);
+//   formOne.appendChild(yesOption);
+//   formOne.appendChild(noOption);
+//   formOne.appendChild(labelTwo);
+//   formOne.appendChild(buttonEL2);
+
+
+
+//   formOne.addEventListener('submit',addToForm);
+
+//   abc.appendChild(formOne);
+
+
+// }
+
+
 
 
 let arrayForm = [];
-function Form(patientNam,time,medicineForYou, yourLocation){
+
+function Form(patientNam,idphone, yourLocation){
   this.patientNam = patientNam;
-  this.time = time;
-  this.medicineForYou = medicineForYou;
+  // this.time = time;
+  // this.medicineForYou = medicineForYou;
   this.location = yourLocation;
+  this.phonepat=idphone;
   arrayForm.push(this);
   console.log(this);
 }
@@ -236,10 +255,10 @@ function addToForm(event){
   console.log('1');
   console.log(event);
   let idName = event.target.namepatient.value;
-  let idTime = event.target.timepatient.value;
-  let idLocation = event.target.optionOne.value;
-  let idRadio = event.target.radioOne.checked;
-  new Form (idName, idTime , idRadio, idLocation );
+  let idLocation = event.target.ploc.value;
+  let idphone = event.target.patientPhone.value;
+  new Form (idName , idphone, idLocation );
+  document.location.href='#';
   savedForm();
 }
 
@@ -268,8 +287,6 @@ function openForm() {
 
   let elem = document.getElementById('myForm');
   elem.style.display = 'block';
-  // let submitBtn = document.getElementById('submit');
-
   myForm.addEventListener('submit',function newLocal(event){
     event.preventDefault();
     console.log(event);
