@@ -4,7 +4,7 @@ header {
 
 main {
     width: 960px;
-    margin: 0 auto;
+    
 }
 
 footer {
@@ -38,17 +38,17 @@ footer h4 {
 }
 
 #logo {
-    position: relative;
-    width: 110px;
-    left: 50%;
-    margin-left: -500px;
+    position: absolute;
+    width: 150px;
+    left: 0px;
+    top: 0px;
+    
 }
 
 nav ul {
-    position: relative;
-    bottom: 70px;
-    left: 50%;
-    margin-left: -240px;
+    position: absolute;
+    top: 42px;
+    right: 410px;
 }
 
 nav ul li {

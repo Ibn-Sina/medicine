@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 footer {
@@ -17,17 +17,14 @@ footer {
     flex-wrap: wrap;
 }
 
-footer .container {
-    display: flex;
+#container {
+    display: inline-block;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 480px;
+    margin: 0px;
 }
-
-
-/* footer .sec.aboutus {
-    margin-right: 30px;
-} */
 
 footer .aboutus {
     width: 500px;
@@ -52,6 +49,8 @@ footer h2:before {
 
 footer p {
     color: #999;
+    width: 460px;
+    text-align: justify;
 }
 
 .sci {
@@ -107,8 +106,12 @@ footer p {
 }
 
 .contact {
-    width: calc(35% - 60px);
+    position: absolute;
+    width: calc(35% - -144px);
     margin-right: 0 !important;
+    display: inline-block;
+    right: 0px;
+    top: 0px;
 }
 
 .contant .info {
@@ -142,9 +145,11 @@ footer p {
 .cpayright {
     width: 100%;
     background: #181818;
-    padding: 8px 100px;
+    padding: 8px 370px;
     text-align: center;
     color: #999;
+    position: relative;
+    top: 20px;
 }
 
 @media (max-width: 991px) {
@@ -157,6 +162,7 @@ footer p {
     footer .container .sec {
         margin-right: 0;
         margin-bottom: 40px;
+        width: 480px;
     }
     footer .container .sec.aboutus,
     .quicklinks,
@@ -167,11 +173,6 @@ footer p {
         padding: 8px 40px;
     }
 }
-
-
-/* * {
-    font-family: 'Rubik', sans-serif;
-} */
 
 h1 {
     position: relative;
@@ -396,4 +397,10 @@ hr {
     left: 20px;
     font-size: x-large;
     text-align: justify;
+}
+#bigFooter{
+    width: 960px;
+    position: relative;
+    left: 50%;
+    margin-left: -480px;
 }

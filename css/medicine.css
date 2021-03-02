@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 footer {
@@ -15,19 +15,18 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    top: 3750px;
 }
 
-footer .container {
-    display: flex;
+#container {
+    display: inline-block;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 480px;
+    margin: 0px;
+    
 }
-
-
-/* footer .sec.aboutus {
-    margin-right: 30px;
-} */
 
 footer .aboutus {
     width: 500px;
@@ -52,6 +51,8 @@ footer h2:before {
 
 footer p {
     color: #999;
+    width: 460px;
+    text-align: justify;
 }
 
 .sci {
@@ -107,8 +108,12 @@ footer p {
 }
 
 .contact {
-    width: calc(35% - 60px);
+    position: absolute;
+    width: calc(35% - -144px);
     margin-right: 0 !important;
+    display: inline-block;
+    right: 0px;
+    top: 0px;
 }
 
 .contant .info {
@@ -142,9 +147,11 @@ footer p {
 .cpayright {
     width: 100%;
     background: #181818;
-    padding: 8px 100px;
+    padding: 8px 370px;
     text-align: center;
     color: #999;
+    position: relative;
+    top: 20px;
 }
 
 @media (max-width: 991px) {
@@ -157,6 +164,7 @@ footer p {
     footer .container .sec {
         margin-right: 0;
         margin-bottom: 40px;
+        width: 480px;
     }
     footer .container .sec.aboutus,
     .quicklinks,
@@ -168,7 +176,104 @@ footer p {
     }
 }
 
-* {
+    
+    button{
+        width: 181px;
+        height: 25px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        background: #16384c;
+        border: 0;
+        border-radius: 20px;
+        outline: none;
+        position: relative;
+        margin-top: 15px;
+        left: 45px;
+         }
+         pre {
+             position: relative;
+            right: 60px;
+         }
+         #header2 {
+            width: 100vw;
+            height: 100px;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            background-color: rgb(57, 62, 70);
+        }
+        #logo{
+            width: 100px;
+            height: 100px;
+        }
+        header {
+            background-color: rgb(57, 62, 70);
+            z-index: 100;
+        }
+        a {
+            text-decoration: none;
+            font-family: 'Rubik', sans-serif;
+            background-color: rgb(57, 62, 70);
+            color: white;
+        }
+        #head {
+            position: relative;
+            width: 960px;
+            margin: 0 auto;
+            left: 50%;
+            margin-left: -480px;
+            top: 130px;
+        }
+        main h2 {
+            margin: 0 auto;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bolder;
+            color: #276678;
+            text-transform: uppercase;
+        }
+        .border{
+            position: relative;
+            display: block;
+            margin: auto;
+            width: 160px;
+            height: 3px;
+            background: #666;
+            margin-bottom: 40px;
+            top: 15px;
+        }
+        #para {
+            width: 960px;
+            left: 50%;
+            margin-left: -480px;
+            position: relative;
+            text-align: justify;
+            line-height: 35px;
+            font-size: 20px;
+        }
+        nav ul {
+            position: absolute;
+            right: 390px;
+            top: 40px;
+            background-color: rgb(57, 62, 70);
+            
+        }
+        
+        nav ul li {
+            display: inline;
+            padding-right: 100px;
+            margin: 0 auto;
+            background-color: rgb(57, 62, 70);
+        }
+        #head {
+            position: relative;
+            width: 960px;
+            margin: 0 auto;
+            left: 50%;
+            margin-left: -480px;
+            top: 130px;
+        }
+/* * {
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -179,23 +284,30 @@ body {
     background: #16384c;
 }
 
-.container,
-.container2 {
-    position: relative;
+*/
+.container {
+    position: absolute;
     width: 350px;
     display: flex;
     justify-content: left;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px;
-    margin-left: 2%;
+    right: 0px;
+    top: 120px;
+    
 }
 
 .container2 {
-    position: relative;
-    top: -30vh;
+    position: absolute;
+    width: 350px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    left: 0px;
+    top: 120px;
+    
 }
-
 .card {
     position: relative;
     max-height: 350px;
@@ -207,6 +319,7 @@ body {
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     transition: 0.5s ease-in-out;
+    border-radius: 25px;
 }
 
 .card:hover {
@@ -218,26 +331,28 @@ body {
     position: relative;
     width: 260px;
     height: 260px;
+    border-radius: 25px;
     top: 0px;
-    /* left: -50px; */
+    left: -50px;
     z-index: 1;
     box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
 }
 
 .card .imgBx img {
     max-width: 100%;
-    border-radius: 4px;
+    border-radius: 25px;
+    height: 100%;
 }
 
 .card .content {
     position: absolute;
-    /* margin-top: -140px; */
-    padding: 10px 15px;
+    margin-top: 0px;
+     padding: 10px 15px;
     width: 203px;
     color: #111;
     top: 5%;
-    right: 20px;
-    /* text-align: center; */
+    right: 20px; 
+    text-align: center;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in-out;
@@ -246,11 +361,26 @@ body {
 .card:hover .content {
     visibility: visible;
     opacity: 1;
-    /* margin-left:-40px; */
+     margin-left:-40px; 
     transition-delay: 0.5s;
 }
-
-button {
+#bigCont {
+    position: relative;
+    width: 1150px;
+    left: 50%;
+    margin-left: -480px;
+    
+}
+body {
+    background-color: #eeeeee;
+}
+#bigFooter{
+    width: 960px;
+    position: relative;
+    left: 50%;
+    margin-left: -480px;
+}
+/* button {
     width: 181px;
     height: 25px;
     color: rgb(255, 255, 255);
@@ -267,4 +397,4 @@ button {
 pre {
     position: relative;
     right: 60px;
-}
+}    */
