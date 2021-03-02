@@ -118,6 +118,9 @@ let newArr = [];
 // let checkBoxs = [];
 // let imgSources = [];
 // let amounts = [];
+
+
+
 function openForm() {
   document.getElementById('myForm').style.display = 'block';
   let submitBtn = document.getElementById('submit');

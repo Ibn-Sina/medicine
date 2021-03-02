@@ -255,7 +255,8 @@ footer p {
             right: 60px;
          }
     /* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
+
+    .open-button {
     position: relative;
     background-color: #555;
     color: white;
