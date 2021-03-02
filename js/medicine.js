@@ -254,19 +254,6 @@ function savedForm(){
 
 
 
-function addNewMedicine(event){
-  event.preventDefault();
-  console.log(event);
-  //  let mNameM =event.target.namMedicine.value;
-  let mNameM='anlskndak';
-  let mPriceM = 'event.target.costMedicine.value';
-  let mInfoM ='event.target.infoMedicine.value';
-  //  console.log('111');
-  let msourceM = 'https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg';
-  new Medicine(mNameM,mPriceM,msourceM,mInfoM);
-
-
-
 function closeForm() {
   document.getElementById('myForm').style.display = 'none';
 }
@@ -297,7 +284,6 @@ function openForm() {
   });
 
 }
-
 
 
 
