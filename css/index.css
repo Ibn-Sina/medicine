@@ -5,7 +5,7 @@
     font-family: 'Rubik', sans-serif;
     
 }
-
+/* // */
 footer {
     position: relative;
     width: 100%;
@@ -418,7 +418,7 @@ hr {
 }
 #logo {
     position: absolute;
-    width: 150px;
+    width: 350px;
     left: 0px;
     top: 0px;
     
@@ -479,6 +479,7 @@ body {
     font-size: 50px;
     background: inherit;
     color: #00adb5;
-    padding-top: 50px;
+    padding-top: 120px;
     padding-bottom: 50px;
+    width: 100vw;
 }

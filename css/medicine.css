@@ -9,6 +9,12 @@ main {
     position: relative;
     padding-bottom: 250px;
 }
+#form2{
+    width: 600px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    z-index: 1000;
+}
 footer {
     position: relative;
     width: 100%;
@@ -19,7 +25,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 200px;
-    top: 3600px;
+    
 }
 
 #container {
@@ -30,8 +36,7 @@ footer {
     width: 480px;
     margin: 0px;
     position: absolute;
-    right: 0px;
-    
+    right: 0px; 
 }
 
 footer .aboutus {
@@ -196,7 +201,7 @@ footer p {
         border-radius: 20px;
         outline: none;
         position: relative;
-        margin-top: 15px;
+        margin-top: -15px;
         left: 45px;
          }
          pre {
@@ -212,7 +217,7 @@ footer p {
             background-color: rgb(57, 62, 70);
         }
         #logo{
-            width: 100px;
+            width: 290px;
             height: 100px;
         }
         header {
@@ -295,85 +300,89 @@ body {
 }
 
 */
-.container {
-    position: absolute;
-    width: 350px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-wrap: wrap;
-    right: 0px;
-    top: 120px;
+.free{
+
+    margin-top: 60px;
+    width: 100%;
+    padding-left: 299px;
+    z-index: 101;
+    margin-bottom: 19%;
+}
+
+
+
+    .container , .container2{
+        position: relative;
+        width: 40%;
+        display: inline-block;
+        justify-content: left;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+
+    }
+    .container .card{
+
+        position: relative;
+        max-height: 350px;
+        width: 215px;
+        background: #fff;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: inline-table;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+    }
+    .container .card:hover{
+        width: 500px;
+        max-height: 350px;
+
     
-}
-
-.container2 {
-    position: absolute;
-    width: 350px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-wrap: wrap;
-    left: 0px;
-    top: 120px;
     
-}
-.card {
-    position: relative;
-    max-height: 350px;
-    width: 215px;
-    background: #fff;
-    margin: 30px 10px;
-    padding: 20px 15px;
-    display: inline-table;
-    flex-direction: column;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    transition: 0.5s ease-in-out;
-    border-radius: 25px;
-}
+    }
+    .container .card .imgBx{
+        position: relative;
+        width: 260px;
+        height: 260px;
+        top: 0px;
+        /* left: -50px; */
+        z-index: 1;
+        box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
+    
+    }
+    .container .card .imgBx img{
+        max-width:100% ;
+        border-radius:4px ;
+    
+    }
+    .container .card .content{
+    
+        position: absolute;
+        /* margin-top: -140px; */
+        padding: 10px 15px;
+        width: 203px;
+        color: #111;
+        top: 5%;
+        right: 20px;
+        text-align: left;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
 
-.card:hover {
-    width: 500px;
-    max-height: 350px;
-}
+    }
+    
+    .container .card:hover .content{
+    
+        visibility: visible;
+        opacity: 1;
+        /* margin-left:-40px; */
+        transition-delay: 0.5s;
+    }
+    
 
-.card .imgBx {
-    position: relative;
-    width: 260px;
-    height: 260px;
-    border-radius: 25px;
-    top: 0px;
-    left: -50px;
-    z-index: 1;
-    box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
-}
 
-.card .imgBx img {
-    max-width: 100%;
-    border-radius: 25px;
-    height: 100%;
-}
 
-.card .content {
-    position: absolute;
-    margin-top: 0px;
-     padding: 10px 15px;
-    width: 203px;
-    color: #111;
-    top: 5%;
-    right: 20px; 
-    text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-}
-
-.card:hover .content {
-    visibility: visible;
-    opacity: 1;
-     margin-left:-40px; 
-    transition-delay: 0.5s;
-}
 #bigCont {
     position: relative;
     width: 1150px;
@@ -390,16 +399,6 @@ body {
     left: 50%;
     margin-left: -575px;
     font-family: 'Rubik', sans-serif;
-}
-#formOne {
-    width: 400px;
-    height: 300px;
-    background-color: blue;
-    position: fixed;
-    left: 35%;
-    top: 50%;
-    z-index: 5;
-    display: none;
 }
 #namepatient {
     width: 250px;
@@ -421,6 +420,7 @@ body {
 }
 #label2 {
     position: relative;
+
     top: 30px;
 }
 #label3 {
@@ -437,4 +437,314 @@ body {
     position: relative;
     top: 120px;
     right: 170px;
+}
+#form2{
+    background-color: black;
+    color: blanchedalmond;
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ///////// */
+
+
+.open-button {
+    position: relative;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    right: 28px;
+    width: 280px;
+    padding-top: 10px;
+    padding-bottom: 29px;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: relative;
+    /* border: 3px solid #666; */
+    z-index: 9;
+    width: 660px;
+    bottom: 42px;
+    /* border-radius: 20px; */
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    position: relative;
+    width: 715px;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid #666;
+    border-radius: 20px;
+    height: 290px;
+    left: 100%;
+    margin-left: -531px;
+    margin-bottom: 50vh;
+  }
+  #hideName , label[for=hideName] {
+      position: relative;
+      left: 105px;
+      bottom: 5px;
+  }
+  label {
+      font-weight: bold;
+      color: rgb(57, 62, 70);
+  }
+  input {
+      border-radius: 20px;
+  }
+  input[name=medicine] {
+    position: relative;
+    left: 350px;
+    bottom: 116px;
+    height: 45px;
+  }
+  input[name=img] {
+      width: 300px;
+  }
+  label[for=medicine] {
+      position: relative;
+      left: 330px;
+      bottom: 105px;
+  }
+  label[for=img] , input[name=img] {
+      position: relative;
+      bottom: 80px;
+      left: 12px;
+  }
+  label[for=num] , input[name=num] {
+    position: relative;
+    bottom: 225px;
+    left: 333px;
+}
+  .form-container h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #00adb5;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text] {
+    width: 190px;
+    padding: 15px;
+    margin:5px 1px 71px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #276678;
+    color: white;
+    padding-top: 13px;
+    padding-bottom: 32px;
+    border: none;
+    cursor: pointer;
+    width: 230px;
+    margin-bottom:10px;
+    opacity: 0.8;
+    
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+    position: relative;
+    left: 361px;
+    bottom: 280px;
+ }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  .form-container .submit {
+    position: relative;
+    left: -209px;
+    bottom: 132px;
+  }
+#donarDiv {
+    width: 450px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 16px 16px 0 #111;
+    position: relative;
+    top: 50px;
+    left: -70px;
+    margin-bottom: 30px;
+}
+#donarImg {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    position: relative;
+    left: 75px;
+    top: 45px;
+}
+#donarDiv h3 {
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //////////////// card popup mohammad //////////////////؟ */
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    height:538px ;
+    
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+ .popup .text {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.popup form .data{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;    
+
+}
+form .data input{
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 1px solid lightslategrey;
+    border-radius: 24px;
+    text-align: center;
+}
+form .btn{
+    margin: 30px 0;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+form .btn .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    z-index: -1;
+    transition: all 0.6s;
+    background: -webkit-linear-gradient(right,#000000,#ea1001,#000000,#ea0101);
+}
+form .btn:hover .inner {
+    left: 0;
+}
+
+form  button{
+    width: 97%;
+    height: 45px;
+    color: rgb(0 0 0);
+    font-size: 16px;
+    background: rgb(57, 62, 70);
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    outline: none;
+    position: relative;
+    margin-top: 15px;
+    left: 7px;
+}
+
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+#dagara {
+    position: relative;
+    bottom: 117px;
 }
