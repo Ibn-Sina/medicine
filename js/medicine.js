@@ -2,18 +2,21 @@
 let medicine =[];
 let medicineInNeed=[];
 let btnarr=[];
+let i = 0;
 let container = document.getElementById('container');
 let container2 = document.getElementById('container2');
 let abc = document.getElementById('One');
-let formTwo =document.getElementById('form2');
-
+let btn2=document.getElementById('mainBtn');
+btn2.addEventListener('click',openForm);
 function Medicine(name , cost , source ,info){
   this.name = name;
   this.cost = cost;
   this.source = source;
   this.info=info;
   medicine.push(this);
+  runder();
   savedData();
+  
 }
 
 
@@ -23,64 +26,66 @@ function Medicine(name , cost , source ,info){
 //imgBox {img }
 //content{H2 , Button }
 function runder(){
-  for(let i =0 ; i<medicine.length; i++){
-    // create div card
-    let divCard=document.createElement('div');
-    divCard.setAttribute('class', 'card');
 
-    // create div ImgBox
-    let divImgBox=document.createElement('div');
-    divImgBox.setAttribute('class', 'imgBx');
+  // create div card
+  let divCard=document.createElement('div');
+  divCard.setAttribute('class', 'card');
 
-    //creat img Element  & give it src
-    let imgEl=document.createElement('img');
-    imgEl.setAttribute('src' , medicine[i].source);
+  // create div ImgBox
+  let divImgBox=document.createElement('div');
+  divImgBox.setAttribute('class', 'imgBx');
 
-    // create div Contant
-    let divContant =document.createElement('div');
-    divContant.setAttribute('class','content');
+  //creat img Element  & give it src
+  let imgEl=document.createElement('img');
+  console.log(medicine[0]);
+  imgEl.setAttribute('src' , medicine[i].source);
 
-    //create h2 Element & fell it with Name
-    let h2Content = document.createElement('h2');
-    h2Content.textContent = medicine[i].name;
+  // create div Contant
+  let divContant =document.createElement('div');
+  divContant.setAttribute('class','content');
 
-    let pContent = document.createElement('p');
-    pContent.textContent = medicine[i].info;
+  //create h2 Element & fell it with Name
+  let h2Content = document.createElement('h2');
+  h2Content.textContent = medicine[i].name;
+
+  let pContent = document.createElement('p');
+  pContent.textContent = medicine[i].info;
 
 
-    //create Button Element
-    let buttonEl=document.createElement('button');
-    buttonEl.setAttribute('type','button');
+  //create Button Element
+  let buttonEl=document.createElement('button');
+  buttonEl.setAttribute('type','button');
 
-    buttonEl.setAttribute('id', `${i}`);
-    buttonEl.textContent=`i need it ${medicine[i].cost}`;
-    // console.log(buttonEl.id);
-    buttonEl.addEventListener('click',addToNeed);
+  buttonEl.setAttribute('id', `${i}`);
+  buttonEl.textContent=`i need it ${medicine[i].cost}`;
+  // console.log(buttonEl.id);
+  buttonEl.addEventListener('click',addToNeed);
 
-    btnarr.push(`${i}`);
+  btnarr.push(`${i}`);
 
-    // console.log(btnarr);
-    //fell imgBox Div with imgEl
-    divImgBox.appendChild(imgEl);
+  // console.log(btnarr);
+  //fell imgBox Div with imgEl
+  divImgBox.appendChild(imgEl);
 
-    //fell content
-    divContant.appendChild(h2Content);
-    divContant.appendChild(pContent);
+  //fell content
+  divContant.appendChild(h2Content);
+  divContant.appendChild(pContent);
 
-    //push div ImgBox & div Contant inside divCard
-    divCard.appendChild(divImgBox);
-    divCard.appendChild(divContant);
-    divCard.appendChild(buttonEl);
-    if(i%2===0){
-      container.appendChild(divCard);
-    }
-    else{
-      container2.appendChild(divCard);
-
-    }
+  //push div ImgBox & div Contant inside divCard
+  divCard.appendChild(divImgBox);
+  divCard.appendChild(divContant);
+  divCard.appendChild(buttonEl);
+  if(i%2===0){
+    container.appendChild(divCard);
+  }
+  else{
+    container2.appendChild(divCard);
 
   }
+
+  i++;
 }
+
 function savedData(){
 
   let data = JSON.stringify(medicineInNeed);
@@ -245,53 +250,185 @@ function savedForm(){
 
 
 
+
 runder();
 
-// formTwo.addEventListener('click',newMedicine);
+formTwo.addEventListener('click',newMedicine);
 
-// function newMedicine(){
-//     let formT2=document.createElement('from');
-//     let  mName = document.createElement('input');
-//     formT2.appendChild(mName);
-//      mName.setAttribute('type','text');
-//      mName.setAttribute('placeholder','Medicine Name ');
-//      mName.setAttribute('id','namMedicine');
-//      let mCost = document.createElement('input');
-//      formT2.appendChild(mCost);
-//      mCost.setAttribute('type','number');
-//      mCost.setAttribute('placeholder','Medicine price');
-//      mCost.setAttribute('id','costMedicine');
-//      //  let mImg = document.createElement('input');
-//     //  formTwo.appendChild(mImg);
-//     //  mImg.setAttribute('type','file');
-//     //  mImg.setAttribute('id','imageM');
-//     let mInfo = document.createElement('input');
-//     formT2.appendChild(mInfo);
-//      mInfo.setAttribute('type','text');
-//      mInfo.setAttribute('placeholder','Medicine Information');
-//      mInfo.setAttribute('id','infoMedicine');
-//      let buttonEl3= document.createElement('input');
-//      formT2.appendChild(buttonEl3);
-//      buttonEl3.setAttribute('type','submit');
-//      buttonEl3.setAttribute('value','submit')
-//      buttonEl3.textContent=`add New Medicine`;
-//      buttonEl3.addEventListener('click',addNewMedicine);
-//      formTwo.appendChild(formT2);
-// formTwo.removeEventListener('click',newMedicine);
-// }
+function newMedicine(){
+    let formT2=document.createElement('from');
+    let  mName = document.createElement('input');
+    formT2.appendChild(mName);
+     mName.setAttribute('type','text');
+     mName.setAttribute('placeholder','Medicine Name ');
+     mName.setAttribute('id','namMedicine');
+     let mCost = document.createElement('input');
+     formT2.appendChild(mCost);
+     mCost.setAttribute('type','number');
+     mCost.setAttribute('placeholder','Medicine price');
+     mCost.setAttribute('id','costMedicine');
+     //  let mImg = document.createElement('input');
+    //  formTwo.appendChild(mImg);
+    //  mImg.setAttribute('type','file');
+    //  mImg.setAttribute('id','imageM');
+    let mInfo = document.createElement('input');
+    formT2.appendChild(mInfo);
+     mInfo.setAttribute('type','text');
+     mInfo.setAttribute('placeholder','Medicine Information');
+     mInfo.setAttribute('id','infoMedicine');
+     let buttonEl3= document.createElement('input');
+     formT2.appendChild(buttonEl3);
+     buttonEl3.setAttribute('type','submit');
+     buttonEl3.setAttribute('value','submit')
+     buttonEl3.textContent=`add New Medicine`;
+     buttonEl3.addEventListener('click',addNewMedicine);
+     formTwo.appendChild(formT2);
+formTwo.removeEventListener('click',newMedicine);
+}
 
-// function addNewMedicine(event){
-// event.preventDefault();
-// console.log(event);
-// //  let mNameM =event.target.namMedicine.value;
-// let mNameM="anlskndak";
-// let mPriceM = 'event.target.costMedicine.value';
-//  let mInfoM ='event.target.infoMedicine.value';
-// //  console.log('111');
-//  let msourceM = "https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg"
-//  new Medicine(mNameM,mPriceM,msourceM,mInfoM);
+function addNewMedicine(event){
+event.preventDefault();
+console.log(event);
+//  let mNameM =event.target.namMedicine.value;
+let mNameM="anlskndak";
+let mPriceM = 'event.target.costMedicine.value';
+ let mInfoM ='event.target.infoMedicine.value';
+//  console.log('111');
+ let msourceM = "https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg"
+ new Medicine(mNameM,mPriceM,msourceM,mInfoM);
 
-//  runder();
+ runder();
 
-// }
+}
+
+
+
+
+function newMedicine(){
+
+  let formP=document.createElement('div');
+  formP.setAttribute('id','myForm');
+  formP.setAttribute('class','form-popup');
+
+
+  let formT2=document.createElement('from');
+  formT2.setAttribute('class','form-container');
+  formT2.setAttribute('id','myForm');
+
+  let head=document.createElement('h1');
+  head.textContent='0000000000000';
+
+  let inEl1=document.createElement('input');
+  let inEl2=document.createElement('input');
+  let inEl3=document.createElement('input');
+  let inEl4=document.createElement('input');
+
+
+  inEl1.setAttribute('id','MedicineName');
+  inEl1.setAttribute('type','text');
+  inEl1.setAttribute('placeholder','Enter Medicine Name');
+  inEl1.setAttribute('name','MedicineName');
+  inEl1.setAttribute('required','true');
+
+
+  inEl2.setAttribute('id','priceId');
+  inEl2.setAttribute('type','number');
+  inEl2.setAttribute('placeholder','Enter Medicine price');
+  inEl2.setAttribute('name','Medicine price');
+  inEl2.setAttribute('required','true');
+
+  inEl3.setAttribute('id','imgSrc');
+  inEl3.setAttribute('type','text');
+  inEl3.setAttribute('placeholder','Enter Image Src');
+  inEl3.setAttribute('name','Image');
+
+  inEl4.setAttribute('id','infoId');
+  inEl4.setAttribute('type','text');
+  inEl4.setAttribute('placeholder','Enter Medicine info');
+  inEl4.setAttribute('name','Medicineinfo');
+
+
+
+  let buttonEl=document.createElement('button');
+  let buttonEl2=document.createElement('button');
+
+  buttonEl.setAttribute('type','submit');
+  buttonEl.setAttribute('class','btn submit');
+  buttonEl.setAttribute('id','submit');
+  buttonEl.textContent='Submit';
+
+  buttonEl2.setAttribute('type','button');
+  buttonEl2.setAttribute('class','btn cancel');
+  buttonEl2.setAttribute('onclick','closeForm()');
+  buttonEl2.textContent='Close';
+
+  formP.appendChild(formT2);
+  formT2.appendChild(head);
+  formT2.appendChild(inEl1);
+  formT2.appendChild(inEl2);
+  formT2.appendChild(inEl3);
+  formT2.appendChild(inEl4);
+
+  formT2.appendChild(buttonEl);
+  formT2.appendChild(buttonEl2);
+
+
+}
+
+function addNewMedicine(event){
+  event.preventDefault();
+  console.log(event);
+  //  let mNameM =event.target.namMedicine.value;
+  let mNameM='anlskndak';
+  let mPriceM = 'event.target.costMedicine.value';
+  let mInfoM ='event.target.infoMedicine.value';
+  //  console.log('111');
+  let msourceM = 'https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg';
+  new Medicine(mNameM,mPriceM,msourceM,mInfoM);
+
+  runder();
+
+}
+
+
+function closeForm() {
+  document.getElementById('myForm').style.display = 'none';
+}
+
+
+
+let myForm = document.getElementById('myForm');
+let medicineName , imgSource='http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg' ,price=0 , info=' ';
+
+
+function openForm() {
+
+  let elem = document.getElementById('myForm');
+  elem.style.display = 'block';
+  // let submitBtn = document.getElementById('submit');
+
+  myForm.addEventListener('submit',function newLocal(event){
+    event.preventDefault();
+    console.log(event);
+    medicineName = event.target.medicineName.value;
+    imgSource = event.target.source.value;
+    price = parseInt(event.target.price.value);
+    info =event.target.info.value;
+    new newRunder(medicineName , price , imgSource , info);
+
+    myForm.removeEventListener('submit',newLocal);
+    closeForm();
+  });
+
+}
+
+
+
+
+function newRunder(medicineName , price , imgSource , info){
+  new Medicine(medicineName , price , imgSource , info);
+
+}
+
+
 

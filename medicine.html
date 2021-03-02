@@ -37,14 +37,41 @@
           <span class="border"></span>
           <p id="para">Don't give up. As a patient, you will face many difficult moments, but behind every difficulty, there's hope. Hard times will give you the power to be back on track to achieve your goals. Always have faith. You only live once. Try all that you can; there are good people everywhere, so don't stop. Last thing Ibn Sina's team always will help you. We love you so much and take care of yourself.</p>
           <span class="border"></span>
+          <button class="open-button" id="mainBtn" onclick="openForm()">New Medicin</button>
+
+          <div class="form-popup" id="myForm">
+            <form class="form-container" id="myForm">
+                <h1>New Medicin</h1>
+                
+                <label for="name"><b>Medicin Name:</b></label>
+                <input id="medicineName" type="text" placeholder="Enter Medicin Name" name="name" required> <br>
+                
+                <label for="medicine"><b>Medicine Price:</b></label>
+                <input id="price" type="number" placeholder="Enter Medicine Price" name="medicine" required> <br>
+                
+                <label for="img"><b>Image Source:</b></label>
+                <input id="source" type="text" placeholder="Enter The Link" name="img" > <br>
+                
+                <label for="num"><b>Medicines info :</b></label>
+                <input id="info" type="text" placeholder="Medicines info" name="num" >
+                
+                <button type="submit" class="btn submit" id="submit">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+            </form>
+        </div>
+         
+
+
       </div>
       <div id="bigCont">
       <div class="container" id="container">
       <siction id="One">
 
+
       
     </siction>
-        
+       
         </div>
         <div class="container2" id="container2">
 
