@@ -29,8 +29,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     width: 480px;
-    margin: 0px;
-    
+    margin-right: 191px;    
 }
 
 footer .aboutus {
@@ -231,7 +230,7 @@ footer p {
         }
         main h2 {
             margin: 0 auto;
-            font-size: xx-large;
+            font-size: large;
             text-align: center;
             color: #00adb5;
             text-transform: uppercase;
@@ -356,7 +355,7 @@ body {
         color: #111;
         top: 5%;
         right: 20px;
-        text-align: center;
+        text-align: left;
         visibility: hidden;
         opacity: 0;
         transition: 0.3s ease-in-out;
@@ -370,8 +369,7 @@ body {
         /* margin-left:-40px; */
         transition-delay: 0.5s;
     }
-    }
-
+    
 
 
 
