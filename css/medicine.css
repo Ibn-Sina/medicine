@@ -1,4 +1,4 @@
-@import url('https://font.googleapis.com/sxx?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -231,10 +231,9 @@ footer p {
         }
         main h2 {
             margin: 0 auto;
-            font-size: 30px;
+            font-size: xx-large;
             text-align: center;
-            font-weight: bolder;
-            color: #276678;
+            color: #00adb5;
             text-transform: uppercase;
         }
         .border{
@@ -255,6 +254,8 @@ footer p {
             text-align: justify;
             line-height: 35px;
             font-size: 20px;
+            font-family: 'Rubik', sans-serif;
+            text-align-last: center;
         }
         nav ul {
             position: absolute;
