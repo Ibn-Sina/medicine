@@ -115,7 +115,6 @@ function addToNeed(event){
   event.preventDefault();
   let a = event.target.id;
   medicineInNeed.push(medicine[a]);
-  console.log('aya');
   savedData();
   document.getElementById('formOne').style.display = 'block';
 }
@@ -255,92 +254,17 @@ function savedForm(){
 
 
 
+function addNewMedicine(event){
+  event.preventDefault();
+  console.log(event);
+  //  let mNameM =event.target.namMedicine.value;
+  let mNameM='anlskndak';
+  let mPriceM = 'event.target.costMedicine.value';
+  let mInfoM ='event.target.infoMedicine.value';
+  //  console.log('111');
+  let msourceM = 'https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg';
+  new Medicine(mNameM,mPriceM,msourceM,mInfoM);
 
-// function newMedicine(){
-
-//   let formP=document.createElement('div');
-//   formP.setAttribute('id','myForm');
-//   formP.setAttribute('class','form-popup');
-
-
-//   let formT2=document.createElement('from');
-//   formT2.setAttribute('class','form-container');
-//   formT2.setAttribute('id','myForm');
-
-//   let head=document.createElement('h1');
-//   head.textContent='0000000000000';
-
-//   let inEl1=document.createElement('input');
-//   let inEl2=document.createElement('input');
-//   let inEl3=document.createElement('input');
-//   let inEl4=document.createElement('input');
-
-
-//   inEl1.setAttribute('id','MedicineName');
-//   inEl1.setAttribute('type','text');
-//   inEl1.setAttribute('placeholder','Enter Medicine Name');
-//   inEl1.setAttribute('name','MedicineName');
-//   inEl1.setAttribute('required','true');
-
-
-//   inEl2.setAttribute('id','priceId');
-//   inEl2.setAttribute('type','number');
-//   inEl2.setAttribute('placeholder','Enter Medicine price');
-//   inEl2.setAttribute('name','Medicine price');
-//   inEl2.setAttribute('required','true');
-
-//   inEl3.setAttribute('id','imgSrc');
-//   inEl3.setAttribute('type','text');
-//   inEl3.setAttribute('placeholder','Enter Image Src');
-//   inEl3.setAttribute('name','Image');
-
-//   inEl4.setAttribute('id','infoId');
-//   inEl4.setAttribute('type','text');
-//   inEl4.setAttribute('placeholder','Enter Medicine info');
-//   inEl4.setAttribute('name','Medicineinfo');
-
-
-
-//   let buttonEl=document.createElement('button');
-//   let buttonEl2=document.createElement('button');
-
-//   buttonEl.setAttribute('type','submit');
-//   buttonEl.setAttribute('class','btn submit');
-//   buttonEl.setAttribute('id','submit');
-//   buttonEl.textContent='Submit';
-
-//   buttonEl2.setAttribute('type','button');
-//   buttonEl2.setAttribute('class','btn cancel');
-//   buttonEl2.setAttribute('onclick','closeForm()');
-//   buttonEl2.textContent='Close';
-
-//   formP.appendChild(formT2);
-//   formT2.appendChild(head);
-//   formT2.appendChild(inEl1);
-//   formT2.appendChild(inEl2);
-//   formT2.appendChild(inEl3);
-//   formT2.appendChild(inEl4);
-
-//   formT2.appendChild(buttonEl);
-//   formT2.appendChild(buttonEl2);
-
-
-// }
-
-// function addNewMedicine(event){
-//   event.preventDefault();
-//   console.log(event);
-//   //  let mNameM =event.target.namMedicine.value;
-//   let mNameM='anlskndak';
-//   let mPriceM = 'event.target.costMedicine.value';
-//   let mInfoM ='event.target.infoMedicine.value';
-//   //  console.log('111');
-//   let msourceM = 'https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg';
-//   new Medicine(mNameM,mPriceM,msourceM,mInfoM);
-
-//   runder();
-
-// }
 
 
 function closeForm() {
@@ -366,22 +290,13 @@ function openForm() {
     imgSource = event.target.source.value;
     price = parseInt(event.target.price.value);
     info =event.target.info.value;
-    new newRunder(medicineName , price , imgSource , info);
+    new Medicine(medicineName , price , imgSource , info);
 
     myForm.removeEventListener('submit',newLocal);
     closeForm();
   });
 
 }
-
-
-
-
-function newRunder(medicineName , price , imgSource , info){
-  new Medicine(medicineName , price , imgSource , info);
-
-}
-
 
 
 
