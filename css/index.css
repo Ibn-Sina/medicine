@@ -201,7 +201,7 @@ h1 {
 header {
     width: 100vw;
     height: 727px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/pill-bottle.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://www.thelowcarbgrocery.com/wp-content/uploads/2020/05/pill-scam.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 727px;
 }
