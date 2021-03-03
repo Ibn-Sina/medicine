@@ -9,6 +9,8 @@ let i=0;
 const donetorform=document.getElementById('Dinfo');
 donetorform.addEventListener('submit',addToForm2);
 let arrayForm2 = [];
+
+
 function MedicineInNeed(name , cost , source ,info){
   this.name = name;
   this.cost = cost;
@@ -16,6 +18,7 @@ function MedicineInNeed(name , cost , source ,info){
   this.info=info;
   runder();
 }
+
 function runder(){
   // create div card
   let divCard=document.createElement('div');
@@ -71,6 +74,9 @@ function runder(){
       divCard.setAttribute('data-aos','fade-left');
       divCard.style.transition= '0.3s ease-in-out';
     }
+
+    }
+
   }
   i++;
 }
@@ -85,6 +91,7 @@ function getData(){
 function addToDonate(){
   document.location.href='#popup1';
 }
+
 function openForm() {
   document.getElementById('myForm').style.display = 'block';
   myForm.addEventListener('submit',function newLocal(event){
@@ -104,6 +111,7 @@ function closeForm() {
 }
 function gitdonation(){
   for (let y=0; y<medicineInNeed2.length;y++){
+
     console.log(medicineInNeed2[y]);
     let n =medicineInNeed2[y].name;
     let c =medicineInNeed2[y].cost;
@@ -112,6 +120,7 @@ function gitdonation(){
     new MedicineInNeed(n, c, s, i);
   }
 }
+
 function MedicineToDonate(name , cost , source ,info){
   this.name = name;
   this.cost = cost;
@@ -120,6 +129,7 @@ function MedicineToDonate(name , cost , source ,info){
   medicineInNeed2.push(this);
   runder();
 }
+
 function Form2(donaterNam,idphone, yourLocation,paymentMethod){
   this.donaterNam = donaterNam;
   this.location = yourLocation;
@@ -128,6 +138,7 @@ function Form2(donaterNam,idphone, yourLocation,paymentMethod){
   arrayForm2.push(this);
   console.log(this);
 }
+
 function addToForm2(event){
   event.preventDefault();
   console.log('1');
@@ -143,5 +154,6 @@ function savedForm(){
   let data3 = JSON.stringify(arrayForm2);
   localStorage.setItem('DonaterInformation', data3);
 }
+
 getData();
 gitdonation();

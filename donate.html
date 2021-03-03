@@ -9,6 +9,7 @@
     <title>Donate</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/donate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="/images/0000-211.png" type="image/x-icon">
@@ -39,15 +40,15 @@
 
         <div class="popup">
                 <div class="text">Donation form </div>
-                <form action="#">
+                <form id="Dinfo">
                     <div class="data">
-                        <input type="text"placeholder="Donater Name">
+                        <input type="text"placeholder="Donater Name" id="nameDoneter">
                     </div>
                     <div class="data" aria-required="true">
-                        <input type="number" placeholder="Phone number">
+                        <input type="number" placeholder="Phone number" id="donaterPhone" >
                     </div>
                     <div class="data">
-                        <input type="text" placeholder="Location ">
+                        <input type="text" placeholder="Location " id="dloc">
                     </div>
                     <div class="data">
                         <input type="text" placeholder="Payment Method">
@@ -152,7 +153,15 @@
     </div>
 </div>
 </footer>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+      {
+          offset:400,
+          duration:500
+      }
+  );
+</script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/donate.js"></script>
 </body>

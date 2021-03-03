@@ -12,6 +12,7 @@ let arrayForm = [];
 btn2.addEventListener('click',openForm);
 const needform=document.getElementById('neededform');
 needform.addEventListener('submit',addToForm);
+
 function Medicine(name , cost , source ,info){
   this.name = name;
   this.cost = cost;
@@ -20,6 +21,7 @@ function Medicine(name , cost , source ,info){
   medicine.push(this);
   runder();
 }
+
 function runder(){
   // create div card
   let divCard=document.createElement('div');
@@ -40,12 +42,14 @@ function runder(){
   let pContent = document.createElement('p');
   pContent.textContent = medicine[i].info;
   //create Button Element
+
   let buttonEl=document.createElement('button');
   buttonEl.setAttribute('type','button');
   buttonEl.setAttribute('id', `${i}`);
   buttonEl.textContent=`i need it ${medicine[i].cost}`;
   // console.log(buttonEl.id);
   buttonEl.addEventListener('click',addToNeed);
+
   btnarr.push(`${i}`);
   // console.log(btnarr);
   //fell imgBox Div with imgEl
@@ -62,6 +66,7 @@ function runder(){
     if(i>=2){
       divCard.setAttribute('data-aos','fade-right');
       divCard.style.transition= '0.3s ease-in-out';
+
     }
   }
   else{
@@ -70,6 +75,7 @@ function runder(){
       divCard.setAttribute('data-aos','fade-left');
       divCard.style.transition= '0.3s ease-in-out';
     }
+
   }
   i++;
 }
@@ -77,6 +83,7 @@ function savedData(){
   let data = JSON.stringify(medicineInNeed);
   localStorage.setItem('Medicine', data);
 }
+
 function addToNeed(event){
   document.location.href='#popup1';
   event.preventDefault();
@@ -85,6 +92,7 @@ function addToNeed(event){
   savedForm();
   savedData();
 }
+
 function Form(patientNam,idphone, yourLocation){
   this.patientNam = patientNam;
   this.location = yourLocation;
@@ -110,6 +118,7 @@ function savedForm(){
 function closeForm() {
   document.getElementById('myForm').style.display = 'none';
 }
+
 function openForm() {
   let elem = document.getElementById('myForm');
   elem.style.display = 'block';
@@ -125,6 +134,7 @@ function openForm() {
     closeForm();
   });
 }
+
 new Medicine('prexal 10' , '36.41 jd' ,'images/153122281_779031189366261_1816601248261593695_n.jpg' , ' The scientific name : Olanzapine used in the treatment of:- Schizophrenia. - Bipolar disorder. - Treatment of mixed mania or acute manic states associated with bipolar or schizophrenia. - Treatment of intractable cases of depression. - Treating depression associated with bipolar disease');
 new Medicine('Aripal 15','77.63 jd','images/154165555_338485370823778_1229647415121863017_n.jpg','The scientific name:Aripiprazole used in the treatment of:  - epression with other drugs.  - Treat psychosis  - It improves focus and thinking positively - It helps in alleviating nervousness in the individual');
 new Medicine('lipitor 40mg','34.35 Jd', 'images/154273009_273170960857738_8019544971280039140_n.jpg',' The scientific name : Atorvastatin used in the treatment of: - Hyperlipidemia.- Hereditary hypercholesterolemia - Reducing heart disease rates such as myocardial infarction.');
@@ -143,3 +153,4 @@ new Medicine('sandimmun neoral 100mg','166 Jd','images/download (1).jpg','The sc
 new Medicine('Forxiga 10mg','34.48 Jd','images/155189718_272896877555583_204947457729308298_n.jpg','The scientific name : Dapagliflozin It is used to  -control blood sugar levels in patients with type 2 diabetes.-Pharmacological forms of Forsega . -Coated tablets 10 mg, 5 mg .');
 new Medicine('Intense chronic obstructive pulmonary oxygen','900 Jd','images/154362219_845885482626166_7675673876928082082_n.jpg','-A 5-liter household oxygen generating device . -Italian origin .');
 new Medicine('Medical chair for special needs','2000 Jd','images/154328692_791594548121080_2161618573554802077_n.jpg','Medical chair for special needs  Helping patients with disabilities or those with special needs (mobility impairment) to move and move easily and easily.');
+

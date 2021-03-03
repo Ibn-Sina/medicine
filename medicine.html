@@ -8,7 +8,9 @@
     <title>Medicine</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/medicine.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
     <link rel="icon" href="/images/0000-211.png" type="image/x-icon">
@@ -160,7 +162,15 @@
     </div>
     </div>
 </footer>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+      {
+          offset:400,
+          duration:500
+      }
+  );
+</script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="js/medicine.js"></script>
 </body>
