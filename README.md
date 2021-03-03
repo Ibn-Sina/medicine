@@ -28,3 +28,9 @@
 
 ### Domain modeling
 ![model](images/modeling.png)
+
+
+### Resources
+
+1. [First one](https://drugsjo.blogspot.com/2019/09/ezura.html)
+1. [Second one](https://altibbi.com/%D8%A7%D9%84%D8%A7%D8%AF%D9%88%D9%8A%D8%A9/%D8%B3%D8%A7%D9%86%D8%AF%D9%8A%D9%85%D9%8A%D9%88%D9%86-%D9%86%D9%8A%D9%88%D8%B1%D8%A7%D9%84)

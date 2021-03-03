@@ -24,10 +24,18 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 200px;
-    
+    margin-top: 120px;
 }
-
+#ah {
+    background: none;
+}
+nav ul li a:hover {
+    color: #00adb5;
+    transition-duration: 1s;
+}
+nav ul li a {
+    transition-duration: 1s;
+}
 #container {
     display: inline-block;
     justify-content: space-between;
@@ -218,7 +226,7 @@ footer p {
         }
         #logo{
             width: 290px;
-            height: 100px;
+            
         }
         header {
             background-color: rgb(57, 62, 70);
@@ -494,7 +502,7 @@ body {
     height: 290px;
     left: 100%;
     margin-left: -531px;
-    margin-bottom: 50vh;
+    bottom: 211px;
   }
   #hideName , label[for=hideName] {
       position: relative;

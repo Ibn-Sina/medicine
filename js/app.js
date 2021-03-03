@@ -16,7 +16,6 @@ function myFunction(){
     // document.getElementById("header").style.fontSize = "20px";
     document.getElementById('header').style.backgroundColor = '';
     document.getElementById('header').style.transitionDuration = '300ms';
-    document.getElementById('aOne').style.color = 'white';
     document.getElementById('logo').style.width = '350px';
     document.getElementById('logo').style.transitionDuration = '300ms';
   }

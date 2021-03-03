@@ -16,7 +16,13 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+nav ul li a:hover {
+    color: #00adb5;
+    transition-duration: 1s;
+}
+nav ul li a {
+    transition-duration: 1s;
+}
 #container {
     display: inline-block;
     justify-content: space-between;
@@ -211,13 +217,14 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'Rubik', sans-serif;
+
 }
 
 h1 {
     position: relative;
     color: rgb(255, 255, 255);
     font-size: 100px;
-    width: 580px;
+    width: 593px;
     top: 250px;
     font-family: 'Rubik';
     left: 50%;
@@ -366,7 +373,7 @@ hr {
 
 #second ul {
     /* list-style-type: upper-latin; */
-    list-style-type: circle;
+    list-style-type: disc;
 }
 
 #second li {

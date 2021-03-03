@@ -34,8 +34,16 @@ body {
     width: 500px;
 
 }
-
-
+#ah {
+    background: none;
+}
+nav ul li a {
+    transition-duration: 1s;
+}
+nav ul li a:hover {
+    color: #00adb5;
+    transition-duration: 1s;
+}
 #containers {
     display: inline-block;
     justify-content: space-between;
@@ -474,7 +482,7 @@ main h2 {
 }
 #logo{
     width: 290px;
-    height: 100px;
+    
 }
 header {
     background-color: rgb(57, 62, 70);
@@ -757,4 +765,7 @@ form .btn  button:hover {
     opacity: 1;
     /* margin-left:-40px; */
     transition-delay: 0.5s;
+}
+.card h2 {
+    font-size: x-large;
 }
