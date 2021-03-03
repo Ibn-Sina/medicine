@@ -14,7 +14,6 @@ btn2.setAttribute('onclick','openForm()');
 const needform=document.getElementById('neededform');
 needform.addEventListener('submit',addToForm);
 
-
 function Medicine(name , cost , source ,info){
   this.name = name;
   this.cost = cost;
@@ -24,55 +23,41 @@ function Medicine(name , cost , source ,info){
   runder();
 }
 
-
 function runder(){
-
   // create div card
   let divCard=document.createElement('div');
   divCard.setAttribute('class', 'card');
-
   // create div ImgBox
   let divImgBox=document.createElement('div');
   divImgBox.setAttribute('class', 'imgBx');
-
   //creat img Element  & give it src
   let imgEl=document.createElement('img');
   console.log(medicine[0]);
   imgEl.setAttribute('src' , medicine[i].source);
-
   // create div Contant
   let divContant =document.createElement('div');
   divContant.setAttribute('class','content');
-
   //create h2 Element & fell it with Name
   let h2Content = document.createElement('h2');
   h2Content.textContent = medicine[i].name;
-
   let pContent = document.createElement('p');
   pContent.textContent = medicine[i].info;
-
-
   //create Button Element
 
   let buttonEl=document.createElement('button');
   buttonEl.setAttribute('type','button');
-
   buttonEl.setAttribute('id', `${i}`);
   buttonEl.textContent=`i need it ${medicine[i].cost}`;
   // console.log(buttonEl.id);
   buttonEl.addEventListener('click',addToNeed);
 
-
   btnarr.push(`${i}`);
-
   // console.log(btnarr);
   //fell imgBox Div with imgEl
   divImgBox.appendChild(imgEl);
-
   //fell content
   divContant.appendChild(h2Content);
   divContant.appendChild(pContent);
-
   //push div ImgBox & div Contant inside divCard
   divCard.appendChild(divImgBox);
   divCard.appendChild(divContant);
@@ -90,18 +75,15 @@ function runder(){
     if(i>=2){
       divCard.setAttribute('data-aos','fade-left');
       divCard.style.transition= '0.3s ease-in-out';
-
     }
 
   }
   i++;
   console.log(medicine[medicine.length -1])
 }
-
 function savedData(){
   let data = JSON.stringify(medicineInNeed);
   localStorage.setItem('Medicine', data);
-
 }
 
 function addToNeed(event){
@@ -113,7 +95,6 @@ function addToNeed(event){
   savedData();
 }
 
-
 function Form(patientNam,idphone, yourLocation){
   this.patientNam = patientNam;
   this.location = yourLocation;
@@ -121,7 +102,6 @@ function Form(patientNam,idphone, yourLocation){
   arrayForm.push(this);
   console.log(this);
 }
-
 function addToForm(event){
   event.preventDefault();
   console.log('1');
@@ -133,21 +113,15 @@ function addToForm(event){
   document.location.href='#';
   savedForm();
 }
-
 function savedForm(){
   let data2 = JSON.stringify(arrayForm);
   localStorage.setItem('forminformation', data2);
-
 }
-
-
 function closeForm() {
   document.getElementById('myForm').style.display = 'none';
 }
 
-
 function openForm() {
-
   let elem = document.getElementById('myForm');
   elem.style.display = 'block';
   

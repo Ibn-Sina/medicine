@@ -415,6 +415,10 @@ nav ul li {
     margin: 0 auto;
     background-color: rgb(57, 62, 70);
 }
+nav ul li a:hover{
+    color: #00adb5;
+            transition-duration: 1s;
+}
 #header {
     width: 100vw;
     height: 100px;
@@ -480,6 +484,9 @@ main h2 {
     z-index: 100;
     background-color: rgb(57, 62, 70);
 }
+#header2 a {
+    background: none;
+}
 #logo{
     width: 290px;
     
@@ -493,6 +500,8 @@ a {
     font-family: 'Rubik', sans-serif;
     background-color: rgb(57, 62, 70);
     color: white;
+    transition-duration: 1s;
+   
 }
 #head {
     position: relative;

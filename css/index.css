@@ -217,7 +217,6 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'Rubik', sans-serif;
-
 }
 
 h1 {
@@ -441,6 +440,10 @@ nav ul li {
     display: inline;
     padding-right: 100px;
     margin: 0 auto;
+}
+nav ul li a:hover {
+    color: #00adb5;
+    transition-duration: 1s;
 }
 
 #header {
