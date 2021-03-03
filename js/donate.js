@@ -147,6 +147,7 @@ function addToForm2(event){
   let idLocation = event.target.dloc.value;
   let idphone = event.target.donaterPhone.value;
   new Form2 (idName , idphone, idLocation ,'cash');
+  swal('Thank You!', 'Maybe a human will survive cause of your donation', 'success');
   document.location.href='#';
   savedForm();
 }
