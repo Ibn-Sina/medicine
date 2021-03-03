@@ -11,8 +11,6 @@ donetorform.addEventListener('submit',addToForm2);
 let arrayForm2 = [];
 
 
-
-
 function MedicineInNeed(name , cost , source ,info){
   this.name = name;
   this.cost = cost;
@@ -75,13 +73,13 @@ function runder(){
     if(i>=2){
       divCard.setAttribute('data-aos','fade-left');
       divCard.style.transition= '0.3s ease-in-out';
+    }
 
     }
 
   }
   i++;
 }
-
 function getData(){
   let gettingData = localStorage.getItem('Medicine');
   let list1 = JSON.parse(gettingData);
@@ -90,7 +88,6 @@ function getData(){
     runder();
   }
 }
-
 function addToDonate(){
   document.location.href='#popup1';
 }
@@ -105,16 +102,13 @@ function openForm() {
     amount = parseInt(event.target.amount.value);
     new MedicineToDonate ( medicineName,amount, imgSource, 'info');
     swal('Thank You!', 'Maybe a human will survive cause of your donation', 'success');
-
     myForm.removeEventListener('submit',newLocal);
     closeForm();
   });
 }
-
 function closeForm() {
   document.getElementById('myForm').style.display = 'none';
 }
-
 function gitdonation(){
   for (let y=0; y<medicineInNeed2.length;y++){
 
@@ -136,10 +130,6 @@ function MedicineToDonate(name , cost , source ,info){
   runder();
 }
 
-
-
-
-
 function Form2(donaterNam,idphone, yourLocation,paymentMethod){
   this.donaterNam = donaterNam;
   this.location = yourLocation;
@@ -160,19 +150,10 @@ function addToForm2(event){
   document.location.href='#';
   savedForm();
 }
-
 function savedForm(){
   let data3 = JSON.stringify(arrayForm2);
   localStorage.setItem('DonaterInformation', data3);
-
 }
-
-
-
-
-
-
-
 
 getData();
 gitdonation();
