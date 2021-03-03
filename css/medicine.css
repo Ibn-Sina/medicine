@@ -229,6 +229,7 @@ footer p {
             font-family: 'Rubik', sans-serif;
             background-color: rgb(57, 62, 70);
             color: white;
+            transition-duration: 1s;
         }
         #head {
             position: relative;
@@ -237,6 +238,9 @@ footer p {
             left: 50%;
             margin-left: -480px;
             top: 130px;
+        }
+        #header2 a {
+            background: none;
         }
         main h2 {
             margin: 0 auto;
@@ -279,6 +283,10 @@ footer p {
             padding-right: 100px;
             margin: 0 auto;
             background-color: rgb(57, 62, 70);
+        }
+        nav ul li a:hover {
+            color: #00adb5;
+            transition-duration: 1s;
         }
         #head {
             position: relative;
