@@ -46,7 +46,10 @@ body {
     position: absolute;
     right: 0px;
 }
+#biggest {
+    width: 1150px;
 
+}
 
 /* footer .sec.aboutus {
     margin-right: 30px;
@@ -695,6 +698,7 @@ form .btn  button:hover {
     padding: 30px;
     margin-left: 2%;
     top: 150px;
+    float: left;
 }
 .card{
 
@@ -708,6 +712,7 @@ form .btn  button:hover {
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
+    margin-bottom: 200px;
 }
  .card:hover{
     width: 500px;

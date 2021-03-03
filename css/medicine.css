@@ -36,7 +36,7 @@ footer {
     width: 480px;
     margin: 0px;
     position: absolute;
-    right: 0px; 
+    right: 50px; 
 }
 
 footer .aboutus {
@@ -201,7 +201,7 @@ footer p {
         border-radius: 20px;
         outline: none;
         position: relative;
-        margin-top: -15px;
+        margin-top: 15px;
         left: 45px;
          }
          pre {
@@ -469,6 +469,7 @@ body {
     padding-top: 10px;
     padding-bottom: 29px;
     font-family: 'Rubik', sans-serif;
+    bottom: 30px;
   }
   
   /* The popup form - hidden by default */
@@ -704,7 +705,6 @@ form  button{
     border: 0;
     border-radius: 20px;
     color: white;
-    letter-spacing: 10px;
     text-transform: uppercase;
     outline: none;
     position: relative;
@@ -747,4 +747,8 @@ form  button{
 #dagara {
     position: relative;
     bottom: 117px;
+}
+#bigCont h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
 }
