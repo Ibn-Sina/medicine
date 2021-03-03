@@ -75,10 +75,10 @@ function runder(){
       divCard.style.transition= '0.3s ease-in-out';
     }
 
-    }
-
-    i++;
   }
+
+  i++;
+}
 
 function getData(){
   let gettingData = localStorage.getItem('Medicine');
